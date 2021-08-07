@@ -1,0 +1,28 @@
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+.sm-btn {
+    height: 46px;
+}
+
+.med-btn {
+    height: 66px;
+    font-size: 24px;
+}
+
+.lg-btn {
+    height: 66px;
+    font-size: 36px;
+}
+
+.yellow-btn {
+    background-color: $yellow;
+}
+
+.black-btn {
+    background-color: $black;
+}

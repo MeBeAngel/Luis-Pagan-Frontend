@@ -1,0 +1,213 @@
+h1 {
+  font-family: "Halant", serif;
+}
+
+p, button {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  height: 100vh;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.sm-btn {
+  height: 46px;
+}
+
+.med-btn {
+  height: 66px;
+  font-size: 24px;
+}
+
+.lg-btn {
+  height: 66px;
+  font-size: 36px;
+}
+
+.yellow-btn {
+  background-color: #FFD530;
+}
+
+.black-btn {
+  background-color: #121212;
+}
+
+header {
+  text-align: right;
+  padding: 10px 20px;
+}
+header .social-media div img {
+  width: 15px;
+  height: 15px;
+  margin: 0 10px;
+}
+header .social-media div img:last-of-type {
+  margin-right: 0;
+}
+
+.gray-header {
+  background-color: #BFB8AB;
+}
+
+.black-header {
+  background-color: #121212;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 20px;
+  z-index: 1;
+}
+nav img {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  width: 90px;
+}
+nav button {
+  position: absolute;
+  top: 50%;
+  left: 125px;
+  transform: translate(0, -50%);
+}
+nav h1 {
+  position: absolute;
+  top: 50%;
+  left: 125px;
+  transform: translate(0, -50%);
+  color: #FFD530;
+  font-size: 24px;
+}
+nav .drop-down .fa-bars {
+  color: #FFD530;
+  font-size: 35px;
+}
+
+.yellow-link {
+  color: #FFD530;
+  font-weight: 300;
+}
+
+.black-link {
+  color: #121212;
+}
+
+.black-nav {
+  background-color: #121212;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 5px;
+}
+footer p {
+  font-size: 0.58rem;
+  line-height: 1.2rem;
+}
+footer .quick-links .quick-link {
+  color: #BFB8AB;
+}
+footer .national-gaurd-contact-info {
+  text-align: center;
+}
+footer .social-media {
+  text-align: center;
+}
+footer .social-media div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+footer .social-media div img {
+  width: 15px;
+  height: 15px;
+}
+
+.yellow-footer {
+  background-color: #FFD530;
+}
+.yellow-footer p {
+  color: #121212;
+}
+
+.black-footer {
+  background-color: #121212;
+}
+.black-footer p {
+  color: #FFD530;
+}
+
+.home-page-jumbotron {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: calc(100vh - 114px);
+  overflow: hidden;
+}
+.home-page-jumbotron .jumbotron-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.home-page-jumbotron .jumbotron-overlay h1 {
+  font-size: 40px;
+  color: #FFD530;
+}
+.home-page-jumbotron video {
+  min-height: 100%;
+  height: 100%;
+}
+
+.benefits {
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: 100%;
+  background-image: url("./images/benefits_bg.svg");
+}
+
+/*# sourceMappingURL=index.css.map */

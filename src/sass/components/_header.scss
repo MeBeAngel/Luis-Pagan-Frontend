@@ -1,0 +1,28 @@
+header {
+    text-align: right;
+    padding: 10px 20px;
+
+    .social-media {
+        div {
+            img {
+                width: 15px;
+                height: 15px;
+                margin: 0 10px;
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+
+.gray-header {
+    background-color: $gray;
+}
+
+
+.black-header {
+    background-color: $black;
+}
