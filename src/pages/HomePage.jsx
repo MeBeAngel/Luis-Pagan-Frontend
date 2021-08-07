@@ -37,7 +37,7 @@ export default function HomePage() {
             <Button btnClass="sm-btn yellow-btn" btnText="WATCH NOW" />
           </div>
         </div>
-        <video muted="muted" loop="loop" src="https://luis-pagan.s3.us-east-2.amazonaws.com/Nation_Gaurd_Video.mp4"></video>
+        <video autoplay="autoplay" muted="muted" loop="loop" src="https://luis-pagan.s3.us-east-2.amazonaws.com/Nation_Gaurd_Video.mp4"></video>
       </section>
 
       <section className="benefits"></section>
