@@ -21,7 +21,9 @@ html {
 }
 
 body {
+  position: relative;
   height: 100vh;
+  margin-top: 114px;
 }
 
 .show {
@@ -82,13 +84,21 @@ header .social-media div img:last-of-type {
   background-color: #121212;
 }
 
+.nav-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 3;
+}
+
 nav {
   position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 20px 20px;
-  z-index: 1;
+  z-index: 3;
 }
 nav img {
   position: absolute;
@@ -126,6 +136,26 @@ nav .drop-down .fa-bars {
 
 .black-nav {
   background-color: #121212;
+}
+
+.drop-down-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100vw;
+  height: calc(100vh - 114px);
+  margin-top: 114px;
+  padding: 40px 0 0 15px;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.drop-down-overlay .drop-down__links {
+  font-size: 32px;
+  line-height: 70px;
+  color: #FEFEFE;
 }
 
 footer {

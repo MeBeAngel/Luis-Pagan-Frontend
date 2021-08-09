@@ -1,10 +1,18 @@
+.nav-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 3;
+}
+
 nav {
     position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 20px 20px;
-    z-index: 1;
+    z-index: 3;
 
     img {
         position: absolute;
@@ -49,4 +57,26 @@ nav {
 
 .black-nav {
     background-color: $black;
+}
+
+
+.drop-down-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100vw;
+    height: calc(100vh - 114px);
+    margin-top: 114px;
+    padding: 40px 0 0 15px;
+    z-index: 2;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+
+    .drop-down__links {
+        font-size: 32px;
+        line-height: 70px;
+        color: $white;
+    }
 }

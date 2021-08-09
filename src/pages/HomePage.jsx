@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
@@ -15,14 +14,12 @@ import LinkedinBlack from "../images/linkedin_black.svg";
 export default function HomePage() {
   return (
     <div>
-      <Header
+      <Nav
         headerClass="gray-header"
         facebookIcon={FacebookBlack}
         instagramIcon={InstagramBlack}
         linkedinIcon={LinkedinBlack}
-      />
 
-      <Nav
         navClass="black-nav"
         logo={LogoWithBackground}
         btnClass="sm-btn yellow-btn"
@@ -37,7 +34,7 @@ export default function HomePage() {
             <Button btnClass="sm-btn yellow-btn" btnText="WATCH NOW" />
           </div>
         </div>
-        <video autoplay="autoplay" muted="muted" loop="loop" src="https://luis-pagan.s3.us-east-2.amazonaws.com/Nation_Gaurd_Video.mp4"></video>
+        <video muted="muted" loop="loop" src="https://luis-pagan.s3.us-east-2.amazonaws.com/Nation_Gaurd_Video.mp4"></video>
       </section>
 
       <section className="benefits"></section>
