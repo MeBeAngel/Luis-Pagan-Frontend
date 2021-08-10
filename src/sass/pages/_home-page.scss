@@ -31,10 +31,23 @@
     }
 }
 
-.benefits {
-    width: 100vw;
-    height: 100vh;
-    background-position: center;
-    background-size: 100%;
-    background-image: url('./images/benefits_bg.svg');
+
+.email-request {
+    text-align: center;
+    padding: 20px 0;
+    background-color: $gray;
+
+    p {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    input {
+        text-align: center;
+        border: none;
+        width: 250px;
+        height: 35px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
 }

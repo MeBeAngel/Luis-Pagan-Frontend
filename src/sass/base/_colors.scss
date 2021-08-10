@@ -1,9 +1,33 @@
-$yellow: #FFD530;
+$yellow: #ffd530;
 
-$gray: #BFB8AB;
+$gray: #bfb8ab;
 
-$dark-gray: #A7A7A7;
+$dark-gray: #a7a7a7;
 
 $black: #121212;
 
-$white: #FEFEFE;
+$white: #fefefe;
+
+.yellow {
+  color: $yellow;
+}
+
+.black {
+  color: $black;
+}
+
+.gray {
+  color: $gray;
+}
+
+.background-yellow {
+  background-color: $yellow;
+}
+
+.background-black {
+  background-color: $black;
+}
+
+.background-gray {
+    background-color: $gray;
+}

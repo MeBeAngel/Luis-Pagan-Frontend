@@ -1,0 +1,16 @@
+.testimonial-wrapper {
+    padding: 20px 15px;
+
+    .testimonial {
+        margin-top: 20px;
+
+        .testimonial__video {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+
+        .testimonial__info {
+          text-align: justify;
+        }
+    }
+}

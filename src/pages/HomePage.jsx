@@ -1,5 +1,7 @@
 import React from "react";
 import Nav from "../components/Nav";
+import TestimonialOne from "../components/TestimonialOne";
+import Benefits from '../components/Benefits';
 import Footer from "../components/Footer";
 import Button from "../components/Button";
 
@@ -15,17 +17,17 @@ export default function HomePage() {
   return (
     <div>
       <Nav
-        headerClass="gray-header"
+        headerClass="background-gray"
         facebookIcon={FacebookBlack}
         instagramIcon={InstagramBlack}
         linkedinIcon={LinkedinBlack}
-
-        navClass="black-nav"
+        navClass="background-black"
         logo={LogoWithBackground}
         btnClass="sm-btn yellow-btn"
         btnText="Get Started"
-        pageTitle=""
-        />
+        btnSrc="/form"
+        barsClass="yellow"
+      />
 
       <section className="home-page-jumbotron">
         <div className="jumbotron-overlay">
@@ -34,10 +36,24 @@ export default function HomePage() {
             <Button btnClass="sm-btn yellow-btn" btnText="WATCH NOW" />
           </div>
         </div>
-        <video muted="muted" loop="loop" src="https://luis-pagan.s3.us-east-2.amazonaws.com/Nation_Gaurd_Video.mp4"></video>
+        <video
+          autoplay="autoplay"
+          muted="muted"
+          loop="loop"
+          src="https://luis-pagan.s3.us-east-2.amazonaws.com/Nation_Gaurd_Video.mp4"
+        ></video>
       </section>
 
-      <section className="benefits"></section>
+      <Benefits />
+
+      <TestimonialOne title="TESTIMONIAL" rightVideo="hide" />
+      <TestimonialOne class="background-black gray" title="TESTIMONIAL" rightVideo="hide" />
+
+      <section className="email-request">
+        <p>CURIOUS? FIND OUT WHAT WE CAN ACHIEVE!</p>
+        <input type="email" placeholder="Email Address" /><br/>
+        <Button btnClass="yellow-btn email-btn" btnText="SUBMIT" />
+      </section>
 
       <Footer
         footerClass="yellow-footer"
