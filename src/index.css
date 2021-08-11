@@ -298,7 +298,9 @@ footer .social-media div img {
   margin: 0 1%;
 }
 
-#grid li:nth-child(6n+4), #grid li:nth-child(6n+5), #grid li:nth-child(6n+6) {
+#grid li:nth-child(6n+4),
+#grid li:nth-child(6n+5),
+#grid li:nth-child(6n+6) {
   margin-top: -6.9285714285%;
   margin-bottom: -6.9285714285%;
   -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
@@ -310,6 +312,30 @@ footer .social-media div img {
 
 #grid li:nth-child(6n+4) {
   margin-left: 0.5%;
+}
+
+.recruit-wrapper {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+}
+.recruit-wrapper h2 {
+  margin: 0 0 20px 15px;
+}
+.recruit-wrapper .recruit-item {
+  padding: 0 15px;
+}
+.recruit-wrapper .recruit-item .recruit-item__img {
+  background-color: #121212;
+  padding: 15px;
+}
+.recruit-wrapper .recruit-item .recruit-item__img img {
+  width: 100%;
+}
+.recruit-wrapper .recruit-item .recruit-item__info {
+  text-align: center;
+  padding: 0 15px 15px 15px;
+  background-color: #121212;
 }
 
 .home-page-jumbotron {

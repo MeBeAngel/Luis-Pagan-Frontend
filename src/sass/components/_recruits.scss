@@ -1,0 +1,25 @@
+.recruit-wrapper {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+
+    h2 {
+        margin: 0 0 20px 15px;
+    }
+
+  .recruit-item {
+    padding: 0 15px;
+
+    .recruit-item__img {
+      background-color: $black;
+      padding: 15px;
+      img { width: 100% }
+    }
+
+    .recruit-item__info {
+      text-align: center;
+      padding: 0 15px 15px 15px;
+      background-color: $black;
+    }
+  }
+}
