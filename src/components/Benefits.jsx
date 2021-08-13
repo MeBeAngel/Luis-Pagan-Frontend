@@ -1,11 +1,17 @@
 import React from "react";
-import Service from "../images/service.svg";
+import Tuition from "../images/benefit_tuition.svg";
+import HealthCare from "../images/benefit_health-care.svg";
+import JobTraining from "../images/benefit_job-training.svg";
+import LifeInsurance from "../images/benefit_life-insurance.svg";
+import Four01k from "../images/benefit_401k.svg";
+import SignOn from "../images/benefit_sign-on.svg";
 import Button from "../components/Button";
 
 export default function Benefits(props) {
-  const showHex = {
-    backgroundImage: `url(${Service})`,
-  };
+  
+  function benefitIcon(icon) {
+      return { backgroundImage: `url(${icon})` };
+  }
 
   const hideHex = {
     visibility: "hidden",
@@ -25,22 +31,22 @@ export default function Benefits(props) {
           <div class="hexagon" style={hideHex}></div>
         </li>
         <li>
-          <div class="hexagon" style={showHex}></div>
+          <div class="hexagon" style={benefitIcon(Four01k)}></div>
         </li>
         <li>
-          <div class="hexagon" style={showHex}></div>
+          <div class="hexagon" style={benefitIcon(HealthCare)}></div>
         </li>
         <li>
-          <div class="hexagon" style={showHex}></div>
+          <div class="hexagon" style={benefitIcon(Tuition)}></div>
         </li>
         <li>
-          <div class="hexagon" style={showHex}></div>
+          <div class="hexagon" style={benefitIcon(SignOn)}></div>
         </li>
         <li>
-          <div class="hexagon" style={showHex}></div>
+          <div class="hexagon" style={benefitIcon(LifeInsurance)}></div>
         </li>
         <li>
-          <div class="hexagon" style={showHex}></div>
+          <div class="hexagon" style={benefitIcon(JobTraining)}></div>
         </li>
         <li>
           <div class="hexagon" style={hideHex}></div>
