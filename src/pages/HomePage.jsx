@@ -1,19 +1,48 @@
-import React from "react";
+import { React, useState } from "react";
 import TestimonialOne from "../components/TestimonialOne";
-import Benefits from '../components/Benefits';
+import Benefits from "../components/Benefits";
 import Recruits from "../components/Recruits";
 import Button from "../components/Button";
 
-
-
 export default function HomePage() {
+
+const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+
+// Opens popup video overlay
+function openOverlay() {
+  document.querySelector(".popup-video-wrapper").style.display="block";
+  document.body.style.overflow = "hidden";
+  window.scrollTo(0, 0);
+  setIsOverlayOpen(true);
+}
+
+function closeOverlay() {
+  document.querySelector(".popup-video-wrapper").style.display="none";
+  document.body.style.overflow = "visible";
+  setIsOverlayOpen(false);
+}
+
+
+
   return (
     <div>
+      <div className="popup-video-wrapper">
+        <div className="popup-video-inner-wrapper">
+          <i className="fas fa-times" onClick={closeOverlay}></i>
+          <video
+            autoplay="autoplay"
+            muted="muted"
+            loop="loop"
+            src="https://luis-pagan.s3.us-east-2.amazonaws.com/Nation_Gaurd_Video.mp4"
+          ></video>
+        </div>
+      </div>
+
       <section className="home-page-jumbotron">
         <div className="jumbotron-overlay">
           <div>
             <h1>Find the Perfect MOS for you.</h1>
-            <Button btnClass="sm-btn yellow-btn" btnText="WATCH NOW" />
+            <Button btnClass="sm-btn yellow-btn" btnText="WATCH NOW" onClick={openOverlay} />
           </div>
         </div>
         <video
@@ -29,12 +58,17 @@ export default function HomePage() {
       <TestimonialOne title="TESTIMONIAL" rightVideo="hide" />
 
       <Recruits />
-      
-      <TestimonialOne class="background-black gray" title="TESTIMONIAL" rightVideo="hide" />
+
+      <TestimonialOne
+        class="background-black gray"
+        title="TESTIMONIAL"
+        rightVideo="hide"
+      />
 
       <section className="email-request">
         <p>CURIOUS? FIND OUT WHAT WE CAN ACHIEVE!</p>
-        <input type="email" placeholder="Email Address" /><br/>
+        <input type="email" placeholder="Email Address" />
+        <br />
         <Button btnClass="yellow-btn email-btn" btnText="SUBMIT" />
       </section>
     </div>

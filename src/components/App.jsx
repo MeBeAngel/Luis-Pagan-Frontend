@@ -14,7 +14,6 @@ export default function App() {
   return (
     <div>
       <Nav />
-
       <Switch>
         <Route path="/" exact component={HomePage} />
         <Route path="/About" component={AboutPage} />
