@@ -22,6 +22,10 @@
   background-color: #bfb8ab;
 }
 
+.background-trans {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 h1 {
   font-family: "Halant", serif;
 }
@@ -42,6 +46,10 @@ h2, h3, h4, h5, h6, p, button {
 
 html {
   font-size: 16px;
+}
+
+.link-reset {
+  text-decoration: none;
 }
 
 body {
@@ -160,7 +168,6 @@ nav .drop-down .fa-bars {
   background-color: rgba(0, 0, 0, 0.9);
 }
 .drop-down-overlay .drop-down__links .link {
-  text-decoration: none;
   font-size: 32px;
   line-height: 70px;
   color: #fefefe;
@@ -194,20 +201,6 @@ footer .social-media div {
 footer .social-media div img {
   width: 15px;
   height: 15px;
-}
-
-.yellow-footer {
-  background-color: #ffd530;
-}
-.yellow-footer p {
-  color: #121212;
-}
-
-.black-footer {
-  background-color: #121212;
-}
-.black-footer p {
-  color: #ffd530;
 }
 
 .testimonial-wrapper {
@@ -316,26 +309,46 @@ footer .social-media div img {
 
 .recruit-wrapper {
   width: 100%;
-  padding: 20px 0;
+  padding: 20px 0 0 0;
   overflow: hidden;
 }
+.recruit-wrapper .slider .slick-dots {
+  bottom: 0;
+}
 .recruit-wrapper h2 {
-  margin: 0 0 20px 15px;
+  margin: 0 0 0 15px;
 }
 .recruit-wrapper .recruit-item {
-  padding: 0 15px;
+  width: 95%;
+  margin: 20px auto 45px auto;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 20px 20px -10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .recruit-wrapper .recruit-item .recruit-item__img {
-  background-color: #121212;
   padding: 15px;
 }
 .recruit-wrapper .recruit-item .recruit-item__img img {
   width: 100%;
 }
 .recruit-wrapper .recruit-item .recruit-item__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
   padding: 0 15px 15px 15px;
-  background-color: #121212;
+}
+.recruit-wrapper .recruit-item .recruit-item__info .fun-fact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 85px;
+  margin-top: 15px;
+  padding: 20px 5px;
+}
+.recruit-wrapper .recruit-item .recruit-item__info .fun-fact p {
+  text-align: justify;
 }
 
 .home-page-jumbotron {
@@ -384,6 +397,20 @@ footer .social-media div img {
   height: 35px;
   margin-bottom: 10px;
   border-radius: 5px;
+}
+
+.about-page {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./images/about_bg.svg");
+}
+
+.mos-page {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./images/mos_bg.svg");
 }
 
 /*# sourceMappingURL=index.css.map */

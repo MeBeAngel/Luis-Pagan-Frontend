@@ -20,42 +20,42 @@ export default function Benefits(props) {
   return (
     <div className="benefits">
       <h2 className="yellow">BENEFITS</h2>
-      <ul id="grid" class="clear">
+      <ul id="grid" className="clear">
         <li>
-          <div class="hexagon" style={hideHex}></div>
+          <div className="hexagon" style={hideHex}></div>
         </li>
         <li>
-          <div class="hexagon" style={hideHex}></div>
+          <div className="hexagon" style={hideHex}></div>
         </li>
         <li>
-          <div class="hexagon" style={hideHex}></div>
+          <div className="hexagon" style={hideHex}></div>
         </li>
         <li>
-          <div class="hexagon" style={benefitIcon(Four01k)}></div>
+          <div className="hexagon" style={benefitIcon(Four01k)}></div>
         </li>
         <li>
-          <div class="hexagon" style={benefitIcon(HealthCare)}></div>
+          <div className="hexagon" style={benefitIcon(HealthCare)}></div>
         </li>
         <li>
-          <div class="hexagon" style={benefitIcon(Tuition)}></div>
+          <div className="hexagon" style={benefitIcon(Tuition)}></div>
         </li>
         <li>
-          <div class="hexagon" style={benefitIcon(SignOn)}></div>
+          <div className="hexagon" style={benefitIcon(SignOn)}></div>
         </li>
         <li>
-          <div class="hexagon" style={benefitIcon(LifeInsurance)}></div>
+          <div className="hexagon" style={benefitIcon(LifeInsurance)}></div>
         </li>
         <li>
-          <div class="hexagon" style={benefitIcon(JobTraining)}></div>
+          <div className="hexagon" style={benefitIcon(JobTraining)}></div>
         </li>
         <li>
-          <div class="hexagon" style={hideHex}></div>
+          <div className="hexagon" style={hideHex}></div>
         </li>
         <li>
-          <div class="hexagon" style={hideHex}></div>
+          <div className="hexagon" style={hideHex}></div>
         </li>
         <li>
-          <div class="hexagon" style={hideHex}></div>
+          <div className="hexagon" style={hideHex}></div>
         </li>
       </ul>
       <p className="yellow">FIND OUT HOW WE CAN HELP</p>

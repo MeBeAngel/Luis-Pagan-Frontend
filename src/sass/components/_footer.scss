@@ -1,58 +1,37 @@
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 5px;
 
-    p {
-        font-size: 0.58rem;
-        line-height: 1.2rem;
-    }
+  p {
+    font-size: 0.58rem;
+    line-height: 1.2rem;
+  }
 
-    .quick-links {
-        .quick-link {
-            color: $gray;
-        }
+  .quick-links {
+    .quick-link {
+      color: $gray;
     }
-    
-    .national-gaurd-contact-info {
-        text-align: center;
-    }
+  }
 
-    .social-media {
-        text-align: center;
-    
-        div {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            
-            img {
-                width: 15px;
-                height: 15px;
-            }
-        }
+  .national-gaurd-contact-info {
+    text-align: center;
+  }
+
+  .social-media {
+    text-align: center;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      img {
+        width: 15px;
+        height: 15px;
+      }
     }
+  }
 }
-
-
-
-.yellow-footer {
-    background-color: $yellow;
-    p {
-        color: $black;
-    }
-}
-
-
-
-.black-footer {
-    background-color: $black;
-    p {
-        color: $yellow;
-    }
-}
-
-
-
