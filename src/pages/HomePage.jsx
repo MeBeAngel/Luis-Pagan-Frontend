@@ -17,7 +17,7 @@ export default function HomePage() {
           </div>
         </div>
         <video
-          autoplay="autoplay"
+          // autoplay="autoplay"
           muted="muted"
           loop="loop"
           src="https://luis-pagan.s3.us-east-2.amazonaws.com/Nation_Gaurd_Video.mp4"

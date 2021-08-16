@@ -6,10 +6,6 @@ import Btn from "../components/Button";
 import LogoWithBackground from "../images/logo_with_yellow_background.svg";
 
 // Social icons
-import FacebookBlack from "../images/facebook_black.svg";
-import InstagramBlack from "../images/instagram_black.svg";
-import LinkedinBlack from "../images/linkedin_black.svg";
-
 import FacebookYellow from "../images/facebook_yellow.svg";
 import InstagramYellow from "../images/instagram_yellow.svg";
 import LinkedinYellow from "../images/linkedin_yellow.svg";
@@ -36,6 +32,8 @@ export default function Nav(props) {
       return "ABOUT ME";
     } else if (url === "/mos") {
       return "TOP 10 MOS";
+    } else if (url === "/form") {
+      return "Form Page";
     } else {
       return "";
     }
@@ -65,22 +63,22 @@ export default function Nav(props) {
       <header className="background-black">
         <div className="social-media bold">
           <div>
-            <Link to="#">
+            <a href="https://www.facebook.com/">
               <img src={FacebookYellow} alt="" />
-            </Link>
-            <Link to="#">
+            </a>
+            <a href="https://www.instagram.com/">
               <img src={InstagramYellow} alt="" />
-            </Link>
-            <Link to="#">
+            </a>
+            <a href="https://www.linkedin.com/">
               <img src={LinkedinYellow} alt="" />
-            </Link>
+            </a>
           </div>
         </div>
       </header>
 
       <nav className="background-black">
-        <img src={LogoWithBackground} alt="" />
-        <Link to={props.btnSrc}>
+        <Link to="/"><img src={LogoWithBackground} alt="" /></Link>
+        <Link to="/form">
           <Btn
             btnClass={btnLogic("sm-btn yellow-btn")}
             btnText={btnLogic("Get Started")}

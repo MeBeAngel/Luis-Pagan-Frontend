@@ -17,7 +17,7 @@ export default function Footer(props) {
         <Link className="link-reset yellow" to="/mos">
           <p>Top 10 M.O.S</p>
         </Link>
-        <Link className="link-reset yellow" to="#">
+        <Link className="link-reset yellow" to="/form">
           <p>Request Info</p>
         </Link>
       </div>
@@ -30,15 +30,15 @@ export default function Footer(props) {
       <div className="social-media bold">
         <p>CONNECT WITH ME</p>
         <div>
-          <Link to="#">
-            <img src={FacebookYellow} alt="" />
-          </Link>
-          <Link to="#">
-            <img src={InstagramYellow} alt="" />
-          </Link>
-          <Link to="#">
-            <img src={LinkedinYellow} alt="" />
-          </Link>
+        <a href="https://www.facebook.com/">
+              <img src={FacebookYellow} alt="" />
+            </a>
+            <a href="https://www.instagram.com/">
+              <img src={InstagramYellow} alt="" />
+            </a>
+            <a href="https://www.linkedin.com/">
+              <img src={LinkedinYellow} alt="" />
+            </a>
         </div>
       </div>
     </footer>

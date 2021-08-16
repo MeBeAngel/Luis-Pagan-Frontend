@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import Tuition from "../images/benefit_tuition.svg";
 import HealthCare from "../images/benefit_health-care.svg";
 import JobTraining from "../images/benefit_job-training.svg";
@@ -59,7 +60,9 @@ export default function Benefits(props) {
         </li>
       </ul>
       <p className="yellow">FIND OUT HOW WE CAN HELP</p>
+      <Link to="/form">
       <Button btnClass="sm-btn yellow-btn" btnText="REQUEST MORE INFO" />
+      </Link>
     </div>
   );
 }
