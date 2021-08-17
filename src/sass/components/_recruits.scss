@@ -14,39 +14,87 @@
   }
 
   .recruit-item {
-    width: 95%;
+    position: relative;
+    width: 326px;
+    height: 500px;
     margin: 20px auto 45px auto;
-    box-shadow: rgb(0, 0, 0, 0.7) 0px 20px 20px -10px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
-    .recruit-item__img {
-      padding: 15px;
-      img {
-        width: 100%;
-      }
+    .recruit-item__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("./images/recruit-card.svg");
+      z-index: 1;
     }
 
-    .recruit-item__info {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-      padding: 0 15px 15px 15px;
 
-      .fun-fact {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 85px;
-        margin-top: 15px;
-        padding: 20px 5px;
+      .recruit-item__img {
+        position: absolute;
+        top: 41px;
+        left: 52px;
+        width: 222px;
+        height: 222px;
+        z-index: 0;
 
-        p {
-          text-align: justify;
+        img {
+          width: 100%;
+          height: 100%;
         }
       }
-    }
+
+      .recruit-name, .recruit-enlistment, .recruit-rank, .recruit-mos, .fun-fact {
+        text-align: right;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        font-size: 20px;
+        font-weight: 400;
+        padding-right: 8px;
+      }
+
+      .recruit-name {
+        bottom: 175px;
+        left: 0;
+        padding-left: 94px;
+      }
+
+      .recruit-enlistment {
+        bottom: 149px;
+        left: 0;
+        padding-left: 165px;
+      }
+
+      .recruit-rank {
+        bottom: 124px;
+        left: 0;
+        padding-left: 91px;
+      }
+
+      .recruit-mos {
+        //color: green;
+        text-align: right;
+        line-height: 25px;
+        height: 55px;
+        bottom: 70px;
+        left: 8px;
+        padding-right: 18px;
+        //background-color: rgba($color: #000000, $alpha: 0.4);
+
+        span {
+          padding-left: 70px;
+        }
+      }
+
+      .fun-fact {
+        overflow: hidden;
+        text-align: center;
+        font-size: 16px;
+        bottom: 26px;
+        left: 0;
+        width: 100%;
+        height: 20px;
+      }
   }
 }

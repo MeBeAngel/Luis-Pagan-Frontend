@@ -5,24 +5,27 @@ import Recruits from "../components/Recruits";
 import Button from "../components/Button";
 
 export default function HomePage() {
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
 
-const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+  // Opens popup video overlay, scrolls to top of page and plays video
+  function openOverlay() {
+    const popupVideo = document.querySelector("#video");
+    document.querySelector(".popup-video-wrapper").style.display = "block";
+    document.body.style.overflow = "hidden";
+    window.scrollTo(0, 0);
+    popupVideo.play();
+    setIsOverlayOpen(true);
+  }
 
-// Opens popup video overlay
-function openOverlay() {
-  document.querySelector(".popup-video-wrapper").style.display="block";
-  document.body.style.overflow = "hidden";
-  window.scrollTo(0, 0);
-  setIsOverlayOpen(true);
-}
-
-function closeOverlay() {
-  document.querySelector(".popup-video-wrapper").style.display="none";
-  document.body.style.overflow = "visible";
-  setIsOverlayOpen(false);
-}
-
-
+  // Closes popup video overlay, pauses video and resets video current time back to 0
+  function closeOverlay() {
+    const popupVideo = document.querySelector("#video");
+    document.querySelector(".popup-video-wrapper").style.display = "none";
+    document.body.style.overflow = "visible";
+    popupVideo.pause();
+    popupVideo.currentTime = 0;
+    setIsOverlayOpen(false);
+  }
 
   return (
     <div>
@@ -30,9 +33,8 @@ function closeOverlay() {
         <div className="popup-video-inner-wrapper">
           <i className="fas fa-times" onClick={closeOverlay}></i>
           <video
-            autoplay="autoplay"
-            muted="muted"
-            loop="loop"
+            id="video"
+            controls="controls"
             src="https://luis-pagan.s3.us-east-2.amazonaws.com/Nation_Gaurd_Video.mp4"
           ></video>
         </div>
@@ -42,11 +44,15 @@ function closeOverlay() {
         <div className="jumbotron-overlay">
           <div>
             <h1>Find the Perfect MOS for you.</h1>
-            <Button btnClass="sm-btn yellow-btn" btnText="WATCH NOW" onClick={openOverlay} />
+            <Button
+              btnClass="sm-btn yellow-btn"
+              btnText="WATCH NOW"
+              onClick={openOverlay}
+            />
           </div>
         </div>
         <video
-          // autoplay="autoplay"
+          autoplay="autoplay"
           muted="muted"
           loop="loop"
           src="https://luis-pagan.s3.us-east-2.amazonaws.com/Nation_Gaurd_Video.mp4"

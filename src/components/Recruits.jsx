@@ -31,16 +31,22 @@ export default function Recruits(props) {
           mos="Toilet bowl cleaner (F12)"
           funFact="Fun Fact text goes here"
         />
-
-        <RecruitCard
+                <RecruitCard
           recruitImage={Image}
-          recruitName="Shane Rios"
+          recruitName="Angel Gonzalez"
           doe="12/11/20"
           rank="Captian"
-          mos="Map maker (F13)"
-          funFact={funFactText(
-            "All fun fact text is capped at 79 characters."
-          )}
+          mos="Toilet bowl cleaner (F12)"
+          funFact="Fun Fact text goes here"
+        />
+
+<RecruitCard
+          recruitImage={Image}
+          recruitName="Angel Gonzalez"
+          doe="12/11/20"
+          rank="Captian"
+          mos="Toilet bowl cleaner (F12)"
+          funFact="Fun Fact text goes here"
         />
       </Slider>
     </div>

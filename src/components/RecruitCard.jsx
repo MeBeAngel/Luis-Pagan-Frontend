@@ -2,19 +2,16 @@ import React from "react";
 
 export default function RecruitCard(props) {
   return (
-    <div className="recruit-item background-black">
+    <div className="recruit-item">
+      <div className="recruit-item__bg"></div>
       <div className="recruit-item__img">
         <img src={props.recruitImage} alt={props.alt} />
       </div>
-      <div className="recruit-item__info yellow bold">
-        <p>{props.recruitName}</p>
-        <p>{`Date of Enlistment: ${props.doe}`}</p>
-        <p>{`Rank: ${props.rank}`}</p>
-        <p>{`MOS: ${props.mos}`}</p>
-        <div className="fun-fact background-yellow black">
-          <p>{props.funFact}</p>
-        </div>
-      </div>
+      <p className="recruit-name">ANGEL GONZALEZ</p>
+      <p className="recruit-enlistment">02/11/1989</p>
+      <p className="recruit-rank">PRIVATE</p>
+      <p className="recruit-mos"><span></span>(131A) Field Artillery</p>
+      <p className="fun-fact">I like to blow stuff up.</p>
     </div>
   );
 }
