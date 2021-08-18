@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import { React, useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
@@ -8,22 +8,43 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 
 export default function App() {
+
+
+  /////////////////////////// Write comment here later /////////////////////
+
+  const [wasLoaded, setWasLoaded] = useState();
+
   useEffect(() => {
-    const body = document.body;
-    const loader = document.getElementById("pre-loader");
+    if (!sessionStorage.getItem("wasLoaded")) {
+      const body = document.body;
+      const loader = document.getElementById("pre-loader");
 
-    loader.style.display = "block";
-    body.style.overflow = "hidden";
+      loader.style.display = "block";
+      body.style.overflow = "hidden";
 
-    setTimeout(function () {
-      loader.style.display = "none";
-      body.style.overflow = "visible";
-    }, 3000);
+      setTimeout(function () {
+        loader.style.display = "none";
+        body.style.overflow = "visible";
+      }, 3000);
+
+      setWasLoaded(true);
+
+      sessionStorage.setItem("wasLoaded", wasLoaded);
+    }
+    if (sessionStorage.wasLoaded) {
+      setWasLoaded(sessionStorage.wasLoaded);
+    }
   }, []);
+
+  //////////////////////////////////////////////////////////////////////////
+
+
+  
 
   return (
     <div>
       <div id="pre-loader"></div>
+
       <Nav />
       <Switch>
         <Route path="/" exact component={HomePage} />
@@ -36,3 +57,9 @@ export default function App() {
     </div>
   );
 }
+
+// useEffect(() => {
+//   if (localStorage.wasLoaded === "false") {
+
+//   }
+// }, [])
