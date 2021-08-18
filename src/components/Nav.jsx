@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import Btn from "../components/Button";
 
 // Nav Logo
-import LogoWithBackground from "../images/logo_with_yellow_background.svg";
+import Logo from "../images/logo.svg";
 
 // Social icons
 import FacebookYellow from "../images/facebook_yellow.svg";
@@ -77,7 +77,7 @@ export default function Nav(props) {
       </header>
 
       <nav className="background-black">
-        <Link to="/"><img src={LogoWithBackground} alt="" /></Link>
+        <Link to="/"><img src={Logo} alt="" /></Link>
         <Link to="/form">
           <Btn
             btnClass={btnLogic("sm-btn yellow-btn")}

@@ -71,6 +71,10 @@ body {
   display: none;
 }
 
+video {
+  background-color: red;
+}
+
 button {
   border: none;
   border-radius: 5px;
@@ -350,7 +354,11 @@ footer .social-media div img {
   width: 100%;
   height: 100%;
 }
-.recruit-wrapper .recruit-item .recruit-name, .recruit-wrapper .recruit-item .recruit-enlistment, .recruit-wrapper .recruit-item .recruit-rank, .recruit-wrapper .recruit-item .recruit-mos, .recruit-wrapper .recruit-item .fun-fact {
+.recruit-wrapper .recruit-item .recruit-name,
+.recruit-wrapper .recruit-item .recruit-enlistment,
+.recruit-wrapper .recruit-item .recruit-rank,
+.recruit-wrapper .recruit-item .recruit-mos,
+.recruit-wrapper .recruit-item .fun-fact {
   text-align: right;
   position: absolute;
   width: 100%;
@@ -360,39 +368,41 @@ footer .social-media div img {
   padding-right: 8px;
 }
 .recruit-wrapper .recruit-item .recruit-name {
-  bottom: 175px;
+  bottom: 200px;
   left: 0;
   padding-left: 94px;
 }
 .recruit-wrapper .recruit-item .recruit-enlistment {
-  bottom: 149px;
+  bottom: 175px;
   left: 0;
   padding-left: 165px;
 }
 .recruit-wrapper .recruit-item .recruit-rank {
-  bottom: 124px;
+  bottom: 150px;
   left: 0;
   padding-left: 91px;
 }
 .recruit-wrapper .recruit-item .recruit-mos {
-  text-align: right;
-  line-height: 25px;
-  height: 55px;
-  bottom: 70px;
+  text-align: left;
+  bottom: 74px;
   left: 8px;
+  height: 76px;
   padding-right: 18px;
+  font-size: 16px;
+  line-height: 26px;
+  overflow: hidden;
 }
 .recruit-wrapper .recruit-item .recruit-mos span {
   padding-left: 70px;
 }
 .recruit-wrapper .recruit-item .fun-fact {
-  overflow: hidden;
   text-align: center;
-  font-size: 16px;
   bottom: 26px;
   left: 0;
   width: 100%;
   height: 20px;
+  font-size: 16px;
+  overflow: hidden;
 }
 
 .popup-video-wrapper {
@@ -422,6 +432,21 @@ footer .social-media div img {
 .popup-video-wrapper .popup-video-inner-wrapper video {
   width: 100%;
   height: 100%;
+}
+
+#pre-loader {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #121212;
+  background-image: url("./images/pre-loader.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 4;
 }
 
 .home-page-jumbotron {

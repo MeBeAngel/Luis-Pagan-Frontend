@@ -10,7 +10,7 @@ export default function RecruitCard(props) {
       <p className="recruit-name">ANGEL GONZALEZ</p>
       <p className="recruit-enlistment">02/11/1989</p>
       <p className="recruit-rank">PRIVATE</p>
-      <p className="recruit-mos"><span></span>(131A) Field Artillery</p>
+      <p className="recruit-mos"><span></span>(131A) Air Defense Command, Control, Communications, Computers Maintainer</p>
       <p className="fun-fact">I like to blow stuff up.</p>
     </div>
   );

@@ -14,15 +14,16 @@
 @import './components/_header.scss';
 @import './components/_nav.scss';
 @import './components/_footer.scss';
-@import './components/testimonial.scss';
-@import './components/benefits.scss';
-@import './components/recruits.scss';
-@import './components/popup-video.scss';
+@import './components/_testimonial.scss';
+@import './components/_benefits.scss';
+@import './components/_recruits.scss';
+@import './components/_popup-video.scss';
+@import './components/_pre-loader.scss';
 
 //Layout
 
 
 //Pages
-@import './pages/home-page.scss';
-@import './pages/about-page.scss';
-@import './pages/mos-page.scss';
+@import './pages/_home-page.scss';
+@import './pages/_about-page.scss';
+@import './pages/_mos-page.scss';

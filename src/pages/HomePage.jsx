@@ -35,7 +35,7 @@ export default function HomePage() {
           <video
             id="video"
             controls="controls"
-            src="https://luis-pagan.s3.us-east-2.amazonaws.com/Nation_Gaurd_Video.mp4"
+            src=""
           ></video>
         </div>
       </div>
@@ -55,7 +55,7 @@ export default function HomePage() {
           autoplay="autoplay"
           muted="muted"
           loop="loop"
-          src="https://luis-pagan.s3.us-east-2.amazonaws.com/Nation_Gaurd_Video.mp4"
+          src=""
         ></video>
       </section>
 
@@ -80,3 +80,6 @@ export default function HomePage() {
     </div>
   );
 }
+
+
+// https://luis-pagan.s3.us-east-2.amazonaws.com/Nation_Gaurd_Video.mp4
