@@ -443,7 +443,7 @@ footer .social-media div img {
   height: 100vh;
   background-color: #121212;
   background-image: url("./images/pre-loader.svg");
-  background-size: 100%;
+  background-size: 200%;
   background-position: center;
   background-repeat: no-repeat;
   z-index: 4;
