@@ -1,0 +1,46 @@
+.mos-card {
+  position: relative;
+  width: 326px;
+  height: 326px;
+  background-size: 100% 100%;
+  background-image: url("./images/mos-card.svg");
+
+  .card__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 37px;
+    left: 0;
+    width: 100%;
+    height: 57px;
+    padding: 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: $yellow;
+    overflow: hidden;
+  }
+
+  .card__img {
+    position: absolute;
+    top: 94px;
+    left: 26px;
+    width: 274px;
+    height: 197px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      font-size: 60px;
+      font-weight: bold;
+      color: $yellow;
+      background-color: rgba($color: #000000, $alpha: 0.1);
+    }
+  }
+}

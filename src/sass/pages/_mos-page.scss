@@ -1,6 +1,17 @@
 .mos-page {
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
     background-image: url('./images/mos_bg.svg');
+
+
+    .mos-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px 0;
+        padding: 50px 0;
+    }
 }
