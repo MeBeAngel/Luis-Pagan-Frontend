@@ -5,20 +5,39 @@ import Test2 from "../images/test2.svg";
 import Test3 from "../images/test3.svg";
 
 export default function MosPage() {
-    return (
-        <div className="mos-page">
-          <div className="mos-wrapper">
-            <MosCard mosTitle="Combat Engineer" mosNumber="12B" mosImg={Test}/>
-            <MosCard mosTitle="Signal Support Systems Specialist" mosNumber="25U" mosImg={Test2}/>
-            <MosCard mosTitle="Army Military Working Dog Handler" mosNumber="31K" mosImg={Test3}/>
-            <MosCard />
-            <MosCard />
-            <MosCard />
-            <MosCard />
-            <MosCard />
-            <MosCard />
-            <MosCard />
-          </div>
+  return (
+    <div className="mos-page">
+      <div className="mos-wrapper">
+        <MosCard
+          mosTitle="Combat Engineer"
+          mosNumber="12B"
+          mosDescription="This is a rough-and-tumble, hands-on job. You get all the
+              excitement of the field, and need to problem solve on the spot —
+              oftentimes in high-stress situations. 12Bs construct fighting
+              positions, help the team navigate rough terrain, place and
+              detonate explosives, detect mines, and a lot more."
+          mosImg={Test}
+        />
+        <MosCard
+          mosTitle="Signal Support Systems Specialist"
+          mosNumber="25U"
+          mosDescription="MOS 25U has a long-winded name, but in the Army they just call them Commo guys (or girls). Their primary job is to make sure that radio systems, computers, local networks, generators, etc. are all working properly."
+          mosImg={Test2}
+        />
+        <MosCard
+          mosTitle="Army Military Working Dog Handler"
+          mosNumber="31K"
+          mosDescription="When it comes to the top 10 Army MOSs, this one was a bit of a no-brainer. Getting paid to work with dogs all day is “dream job” material for a ton of people. MWD (Military Working Dog) Handlers train their dogs to perform military operations overseas and at home, from attacking threats to sniffing out bombs. Dogs are also a powerful asset to soldiers suffering with PTSD."
+          mosImg={Test3}
+        />
+        <MosCard />
+        <MosCard />
+        <MosCard />
+        <MosCard />
+        <MosCard />
+        <MosCard />
+        <MosCard />
       </div>
-    );
+    </div>
+  );
 }

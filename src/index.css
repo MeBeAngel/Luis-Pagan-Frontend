@@ -437,7 +437,7 @@ footer .social-media div img {
 .mos-card {
   position: relative;
   width: 326px;
-  height: 326px;
+  height: 431px;
   background-size: 100% 100%;
   background-image: url("./images/mos-card.svg");
 }
@@ -446,7 +446,7 @@ footer .social-media div img {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 37px;
+  top: 40px;
   left: 0;
   width: 100%;
   height: 57px;
@@ -456,26 +456,71 @@ footer .social-media div img {
   color: #ffd530;
   overflow: hidden;
 }
-.mos-card .card__img {
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
   position: absolute;
-  top: 94px;
+  top: 119px;
   left: 26px;
+  background-color: transparent;
   width: 274px;
-  height: 197px;
+  height: 274px;
   border-radius: 20px;
-  background-size: cover;
-  background-position: center;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
 }
-.mos-card .card__img span {
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+  border-radius: 20px;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  color: #ffd530;
   font-size: 60px;
   font-weight: bold;
-  color: #ffd530;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-position: center;
+  background-image: url("./images/test.svg");
+}
+
+/* Style the back side */
+.flip-card-back {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  text-align: justify;
+  font-size: 14px;
+  color: #bfb8ab;
+  transform: rotateY(180deg);
 }
 
 #pre-loader {
