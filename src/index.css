@@ -436,22 +436,26 @@ footer .social-media div img {
 
 .mos-card {
   position: relative;
-  width: 326px;
-  height: 431px;
+  width: 327.87px;
+  height: 418px;
   background-size: 100% 100%;
   background-image: url("./images/mos-card.svg");
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: black 15px 25px 20px -20px;
 }
 .mos-card .card__title {
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 40px;
+  top: 27px;
   left: 0;
   width: 100%;
-  height: 57px;
+  height: 80px;
   padding: 0 5px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   color: #ffd530;
   overflow: hidden;
@@ -460,12 +464,12 @@ footer .social-media div img {
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   position: absolute;
-  top: 119px;
+  top: 107px;
   left: 26px;
   background-color: transparent;
   width: 274px;
   height: 274px;
-  border-radius: 20px;
+  border-radius: 16px;
   perspective: 1000px;
   /* Remove this if you don't want the 3D effect */
 }
@@ -494,20 +498,26 @@ footer .social-media div img {
   -webkit-backface-visibility: hidden;
   /* Safari */
   backface-visibility: hidden;
-  border-radius: 20px;
+  border-radius: 16px;
 }
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
+  background-size: cover;
+  background-position: center;
+  border: solid #ffd530 3px;
+}
+.flip-card-front .mos-num {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ffd530;
+  width: 100%;
+  height: 100%;
   font-size: 60px;
   font-weight: bold;
-  background-size: cover;
-  background-position: center;
-  background-image: url("./images/test.svg");
+  color: #ffd530;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
 }
 
 /* Style the back side */
@@ -519,8 +529,10 @@ footer .social-media div img {
   padding: 10px;
   text-align: justify;
   font-size: 14px;
-  color: #bfb8ab;
+  color: #ffd530;
+  background-color: #121212;
   transform: rotateY(180deg);
+  border: solid #ffd530 3px;
 }
 
 #pre-loader {

@@ -11,7 +11,7 @@ export default function MosCard(props) {
             className="flip-card-front"
             style={{ backgroundImage: "url(" + props.mosImg + ")" }}
           >
-            <p>{props.mosNumber}</p>
+            <p className="mos-num">{props.mosNumber}</p>
           </div>
           <div className="flip-card-back background-black">
             <p>{props.mosDescription}</p>
