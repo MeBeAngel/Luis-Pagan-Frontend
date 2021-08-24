@@ -1,12 +1,37 @@
-import React from "react";
+import { React, useState } from "react";
 import MosCard from "../components/MosCard";
 import Test from "../images/test.svg";
 import Test2 from "../images/test2.svg";
 import Test3 from "../images/test3.svg";
 
 export default function MosPage() {
+
+
+  //////////////////////////////////////////////////////////////////////////////////////////
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
+  // Opens MOS card video overlay
+  function openOverlay() {
+    const mosVideo = document.querySelector("#mos-video");
+    document.querySelector(".mos-video-wrapper").style.display = "block";
+    mosVideo.play();
+    setIsVideoOpen(true);
+  }
+
+  // Closes mos card video overlay, pauses video and resets video current time back to 0
+  function closeOverlay() {
+    if (isVideoOpen === true) {
+      const mosVideo = document.querySelector("#mos-video");
+      document.querySelector(".mos-video-wrapper").style.display = "none";
+      mosVideo.pause();
+      mosVideo.currentTime = 0;
+      setIsVideoOpen(false);
+    }
+  }
+  ////////////////////////////////////////////////////////////////////////////////////////
+
   return (
-    <div className="mos-page">
+    <div className="mos-page" onClick={closeOverlay}>
       <div className="mos-wrapper">
         <MosCard
           mosTitle="Combat Engineer"
@@ -17,6 +42,8 @@ export default function MosPage() {
               positions, help the team navigate rough terrain, place and
               detonate explosives, detect mines, and a lot more."
           mosImg={Test}
+          btnOnClick={openOverlay}
+          videoOnClick={closeOverlay}
         />
         <MosCard
           mosTitle="Signal Support Systems Specialist"

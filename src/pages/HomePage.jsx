@@ -9,7 +9,7 @@ export default function HomePage() {
 
   // Opens popup video overlay, scrolls to top of page and plays video
   function openOverlay() {
-    const popupVideo = document.querySelector("#video");
+    const popupVideo = document.querySelector("#popup-video");
     document.querySelector(".popup-video-wrapper").style.display = "block";
     document.body.style.overflow = "hidden";
     window.scrollTo(0, 0);
@@ -19,7 +19,7 @@ export default function HomePage() {
 
   // Closes popup video overlay, pauses video and resets video current time back to 0
   function closeOverlay() {
-    const popupVideo = document.querySelector("#video");
+    const popupVideo = document.querySelector("#popup-video");
     document.querySelector(".popup-video-wrapper").style.display = "none";
     document.body.style.overflow = "visible";
     popupVideo.pause();
@@ -33,9 +33,9 @@ export default function HomePage() {
         <div className="popup-video-inner-wrapper">
           <i className="fas fa-times" onClick={closeOverlay}></i>
           <video
-            id="video"
+            id="popup-video"
             controls="controls"
-            src=""
+            src="https://luis-pagan.nyc3.digitaloceanspaces.com/Nation_Gaurd_Video.mp4"
           ></video>
         </div>
       </div>
@@ -52,10 +52,10 @@ export default function HomePage() {
           </div>
         </div>
         <video
-          autoplay="autoplay"
+          //autoplay="autoplay"
           muted="muted"
           loop="loop"
-          src=""
+          src="https://luis-pagan.nyc3.digitaloceanspaces.com/Nation_Gaurd_Video.mp4"
         ></video>
       </section>
 

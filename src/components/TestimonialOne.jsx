@@ -10,7 +10,7 @@ export default function TestimonialOne(props) {
             width="100%"
             height="100%"
             muted="muted"
-            src="https://luis-pagan.s3.us-east-2.amazonaws.com/Nation_Gaurd_Video.mp4"
+            src="https://woolyss.com/f/Chimera-AV1-8bit-480x270-552kbps.mp4"
           ></video>
         </div>
         <div className="testimonial__info gray bold">
@@ -29,7 +29,7 @@ export default function TestimonialOne(props) {
             height="100%"
             muted="muted"
             loop="loop"
-            src="https://luis-pagan.s3.us-east-2.amazonaws.com/Nation_Gaurd_Video.mp4"
+            src="https://woolyss.com/f/Chimera-AV1-8bit-480x270-552kbps.mp4"
           ></video>
         </div>
       </div>
