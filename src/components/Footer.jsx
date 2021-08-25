@@ -8,7 +8,8 @@ import LinkedinYellow from "../images/linkedin_yellow.svg";
 
 export default function Footer(props) {
   return (
-    <footer className="background-black yellow">
+    <footer>
+      <div className="footer-inner-wrapper">
       <div className="quick-links bold">
         <p className="quick-link">Quick Links</p>
         <Link className="link-reset yellow" to="/about">
@@ -40,6 +41,7 @@ export default function Footer(props) {
               <img src={LinkedinYellow} alt="" />
             </a>
         </div>
+      </div>
       </div>
     </footer>
   );

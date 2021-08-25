@@ -7,11 +7,6 @@ import Image from "../images/recruit.svg";
 
 export default function Recruits(props) {
 
-  // Cap fun fact text at 79 char
-  function funFactText(str) {
-    return str.slice(0, 79);
-  }
-
   const settings = {
     dots: true,
     infinite: true,

@@ -1,9 +1,10 @@
 .nav-wrapper {
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100vw;
   z-index: 3;
+  background-color: $black;
 }
 
 nav {
@@ -11,6 +12,9 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  max-width: 2000px;
+  height: 75px;
+  margin: 0 auto;
   padding: 20px 20px;
   z-index: 3;
 
@@ -42,6 +46,10 @@ nav {
       font-size: 35px;
     }
   }
+
+  .desktop-links {
+    display: none;
+  }
 }
 
 .drop-down-overlay {
@@ -63,6 +71,35 @@ nav {
       font-size: 32px;
       line-height: 70px;
       color: $white;
+    }
+  }
+}
+
+
+
+
+
+
+@media (min-width: 768px) {
+  nav {
+    .drop-down {
+      display: none;
+    }
+
+    .desktop-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .link {
+        margin-right: 35px;
+        font-size: 24px;
+        color: $yellow;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
     }
   }
 }

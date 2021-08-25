@@ -11,7 +11,6 @@ import InstagramYellow from "../images/instagram_yellow.svg";
 import LinkedinYellow from "../images/linkedin_yellow.svg";
 
 export default function Nav(props) {
-
   // Saves open and closed state of Nav overlay
   const [showNavOverlay, setShowNavOverlay] = useState(false);
 
@@ -77,7 +76,9 @@ export default function Nav(props) {
       </header>
 
       <nav className="background-black">
-        <Link to="/"><img src={Logo} alt="" /></Link>
+        <Link to="/">
+          <img src={Logo} alt="" />
+        </Link>
         <Link to="/form">
           <Btn
             btnClass={btnLogic("sm-btn yellow-btn")}
@@ -85,14 +86,30 @@ export default function Nav(props) {
           />
         </Link>
         <h1 className="">{pageTitle()}</h1>
+
+        {/*  Mobile Only */}
         <div
           onClick={showNavOverlay === false ? openOverlay : closeOverlay}
           className="drop-down"
         >
           <i className={`fas fa-bars yellow`}></i>
         </div>
+
+        {/*  Desktop Only */}
+        <div className="desktop-links">
+          <Link className="link-reset link" to="/" onClick={closeOverlay}>
+            <p>HOME</p>
+          </Link>
+          <Link className="link-reset link" to="/about" onClick={closeOverlay}>
+            <p>ABOUT ME</p>
+          </Link>
+          <Link className="link-reset link" to="/mos" onClick={closeOverlay}>
+            <p>TOP 10 M.O.S</p>
+          </Link>
+        </div>
       </nav>
 
+      {/*  Mobile Only */}
       <div className="drop-down-overlay" onClick={closeOverlay}>
         <div className="drop-down__links">
           <Link className="link-reset link" to="/" onClick={closeOverlay}>

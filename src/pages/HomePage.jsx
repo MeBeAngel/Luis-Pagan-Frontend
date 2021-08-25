@@ -1,11 +1,10 @@
-import { React, useState } from "react";
+import React from "react";
 import TestimonialOne from "../components/TestimonialOne";
 import Benefits from "../components/Benefits";
 import Recruits from "../components/Recruits";
 import Button from "../components/Button";
 
 export default function HomePage() {
-  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
 
   // Opens popup video overlay, scrolls to top of page and plays video
   function openOverlay() {
@@ -14,7 +13,6 @@ export default function HomePage() {
     document.body.style.overflow = "hidden";
     window.scrollTo(0, 0);
     popupVideo.play();
-    setIsOverlayOpen(true);
   }
 
   // Closes popup video overlay, pauses video and resets video current time back to 0
@@ -24,7 +22,6 @@ export default function HomePage() {
     document.body.style.overflow = "visible";
     popupVideo.pause();
     popupVideo.currentTime = 0;
-    setIsOverlayOpen(false);
   }
 
   return (

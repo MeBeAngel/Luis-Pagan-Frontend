@@ -1,5 +1,7 @@
 header {
   text-align: right;
+  max-width: 2000px;
+  margin: 0 auto;
   padding: 10px 20px;
 
   .social-media {
@@ -11,6 +13,23 @@ header {
 
         &:last-of-type {
           margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+@media (min-width: 768px) {
+  header {
+    .social-media {
+      div {
+        img {
+          width: 24px;
+          height: 24px;
         }
       }
     }

@@ -57,13 +57,19 @@ export default function MosPage() {
           mosDescription="When it comes to the top 10 Army MOSs, this one was a bit of a no-brainer. Getting paid to work with dogs all day is “dream job” material for a ton of people. MWD (Military Working Dog) Handlers train their dogs to perform military operations overseas and at home, from attacking threats to sniffing out bombs. Dogs are also a powerful asset to soldiers suffering with PTSD."
           mosImg={Test3}
         />
-        <MosCard />
-        <MosCard />
-        <MosCard />
-        <MosCard />
-        <MosCard />
-        <MosCard />
-        <MosCard />
+        <MosCard mosTitle="Air Defense" />
+
+        <MosCard mosTitle="Combat Medic" />
+
+        <MosCard mosTitle="Army Military Working Dog Handler" />
+
+        <MosCard mosTitle="Army Military Working Dog Handler" />
+
+        <MosCard mosTitle="Army Military Working Dog Handler" />
+
+        <MosCard mosTitle="Army Military Working Dog Handler" />
+
+        <MosCard mosTitle="Army Military Working Dog Handler" />
       </div>
     </div>
   );

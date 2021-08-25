@@ -57,9 +57,3 @@ export default function App() {
     </div>
   );
 }
-
-// useEffect(() => {
-//   if (localStorage.wasLoaded === "false") {
-
-//   }
-// }, [])

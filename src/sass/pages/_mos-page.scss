@@ -15,3 +15,27 @@
         padding: 50px 0;
     }
 }
+
+
+
+
+@media(min-width: 830px) {
+    .mos-page {    
+        .mos-wrapper {
+            grid-template-columns: 1fr 1fr;
+            gap: 50px 50px;
+            padding: 50px 0;
+        }
+    }
+}
+
+
+@media(min-width: 1250px) {
+    .mos-page {    
+        .mos-wrapper {
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 50px 50px;
+            padding: 50px 0;
+        }
+    }
+}
