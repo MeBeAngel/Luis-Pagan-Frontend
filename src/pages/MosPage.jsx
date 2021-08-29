@@ -1,12 +1,12 @@
 import { React, useState } from "react";
+import { Link } from "react-router-dom";
 import MosCard from "../components/MosCard";
+import Button from "../components/Button";
 import Test from "../images/test.svg";
 import Test2 from "../images/test2.svg";
 import Test3 from "../images/test3.svg";
 
 export default function MosPage() {
-
-
   //////////////////////////////////////////////////////////////////////////////////////////
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
@@ -32,6 +32,24 @@ export default function MosPage() {
 
   return (
     <div className="mos-page" onClick={closeOverlay}>
+      <div className="mos-page__intro">
+        <h1>FIND YOUR MOS</h1>
+        <p>
+          Which direction does your life path plan to take you? Which career
+          piques your interest? Whether you’re sure of what you want to do or
+          have no idea - the Army National Guard has you covered! With a
+          plethora of career paths and vital jobs the National Guard is here to
+          make sure that the only direction you go, is up. While there are
+          hundreds of jobs to pursue, we are showcasing this year’s top ten
+          M.O.S’s to give you look into some popular jobs.
+        </p>
+        <Link to="/form">
+          <Button
+            btnClass="sm-btn black-btn white bold"
+            btnText="Find Out More"
+          />
+        </Link>
+      </div>
       <div className="mos-wrapper">
         <MosCard
           mosTitle="Combat Engineer"

@@ -1,8 +1,10 @@
 .nav-wrapper {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
   width: 100vw;
+  max-width: 1416px;
   z-index: 3;
   background-color: $black;
 }
@@ -12,7 +14,6 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  max-width: 2000px;
   height: 75px;
   margin: 0 auto;
   padding: 20px 20px;
@@ -59,7 +60,7 @@ nav {
   display: none;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 114px);
   margin-top: 114px;
   padding: 40px 0 0 15px;
@@ -74,11 +75,6 @@ nav {
     }
   }
 }
-
-
-
-
-
 
 @media (min-width: 768px) {
   nav {
@@ -100,6 +96,18 @@ nav {
           margin-right: 0;
         }
       }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  nav {
+    img {
+      left: 25px;
+    }
+
+    h1 {
+      left: 135px;
     }
   }
 }

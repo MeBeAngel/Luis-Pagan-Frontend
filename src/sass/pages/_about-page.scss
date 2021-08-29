@@ -1,6 +1,8 @@
 .about-page {
   position: relative;
+  max-width: 1400px;
   min-height: 100vh;
+  margin: 0 auto;
   background-color: $black;
 
   .image {
@@ -18,7 +20,7 @@
 
   .bio {
     text-align: justify;
-    padding: 15px;
+    padding: 25px;
     background-color: $black;
     color: $gray;
 
@@ -27,6 +29,36 @@
 
       &:last-of-type {
         margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+@media(min-width: 1000px) {
+  .about-page {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("./images/about_bg.svg");
+    background-color: $yellow;
+  
+    .image {
+      display: none;
+    }
+  
+    .bio {
+      width: 100%;
+      height: 100vh;
+      padding: 0;
+      background-size: 95% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("./images/about_content.svg");
+      background-color: transparent;
+
+      p {
+        display: none;
       }
     }
   }

@@ -20,7 +20,7 @@ export default function Benefits(props) {
 
   return (
     <div className="benefits">
-      <h2 className="yellow">BENEFITS</h2>
+      <h1 className="yellow">BENEFITS</h1>
       <ul id="grid" className="clear">
         <li>
           <div className="hexagon" style={hideHex}></div>

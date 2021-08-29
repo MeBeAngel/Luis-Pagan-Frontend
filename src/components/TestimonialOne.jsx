@@ -3,7 +3,7 @@ import React from "react";
 export default function TestimonialOne(props) {
   return (
     <div className={`testimonial-wrapper ${props.class}`}>
-      <h2>{props.title}</h2>
+      {/* <h1>{props.title}</h1> */}
       <div className="testimonial">
         <div className={`testimonial__video ${props.leftVideo}`}>
           <video

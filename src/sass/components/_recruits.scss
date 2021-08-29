@@ -1,11 +1,35 @@
 .recruit-wrapper {
+  text-align: center;
   width: 100%;
   padding: 20px 0 0 0;
   overflow: hidden;
 
+  h1 {
+    padding-left: 15px;
+  }
+
+  p {
+    text-align: justify;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
   .slider {
+    max-width: 370px;
+    margin: 0 auto;
     .slick-dots {
       bottom: 0;
+    }
+  }
+  @media(min-width: 768px) {
+    .slider {
+      max-width: 700px;
+    }
+  }
+  @media(min-width: 1100px) {
+    .slider {
+      max-width: 1050px;
     }
   }
 

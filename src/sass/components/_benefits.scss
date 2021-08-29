@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   height: auto;
   padding: 20px 15px;
   background-position: center;
@@ -19,6 +19,7 @@
 #grid {
   position: relative;
   width: 100%;
+  max-width: 786px;
   margin: 20px auto;
   padding: 0; /* Clears unordered list default of 40px */
   transform: rotate(-90deg);

@@ -1,13 +1,15 @@
 html {
     width: 100vw;
     min-height: 100vh;
-    //overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 body {
     position: relative;
     min-height: 100%;
     padding-top: 114px;
+    background-color: $black;
+    overflow-x: hidden;
 }
 
 
