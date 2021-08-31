@@ -1,8 +1,6 @@
 .about-page {
   position: relative;
-  max-width: 1400px;
   min-height: 100vh;
-  margin: 0 auto;
   background-color: $black;
 
   .image {
@@ -49,7 +47,9 @@
   
     .bio {
       width: 100%;
+      max-width: 1700px;
       height: 100vh;
+      margin: 0 auto; 
       padding: 0;
       background-size: 95% 100%;
       background-position: center;

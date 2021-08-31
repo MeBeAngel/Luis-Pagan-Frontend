@@ -64,10 +64,10 @@ html {
 
 body {
   position: relative;
+  width: 100%;
   min-height: 100%;
   padding-top: 114px;
   background-color: #121212;
-  overflow-x: hidden;
 }
 
 .show {
@@ -137,8 +137,7 @@ header .social-media div img:last-of-type {
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 100vw;
-  max-width: 1416px;
+  width: 100%;
   z-index: 3;
   background-color: #121212;
 }
@@ -218,18 +217,8 @@ nav .desktop-links {
     margin-right: 0;
   }
 }
-@media (min-width: 1400px) {
-  nav img {
-    left: 25px;
-  }
-  nav h1 {
-    left: 135px;
-  }
-}
 footer {
   background-color: #121212;
-  max-width: 1400px;
-  margin: 0 auto;
 }
 footer .footer-inner-wrapper {
   display: flex;
@@ -262,6 +251,22 @@ footer .footer-inner-wrapper .social-media div img {
   height: 15px;
 }
 
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+  }
+  footer .footer-inner-wrapper p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+  }
+  footer .footer-inner-wrapper .social-media div img {
+    width: 25px;
+    height: 25px;
+  }
+}
 .testimonial-wrapper {
   padding: 20px 15px;
 }
@@ -270,8 +275,23 @@ footer .footer-inner-wrapper .social-media div img {
   max-width: 508px;
 }
 .testimonial-wrapper .testimonial .testimonial__video {
+  position: relative;
   width: 100%;
   margin-bottom: 20px;
+}
+.testimonial-wrapper .testimonial .testimonial__video .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+}
+.testimonial-wrapper .testimonial .testimonial__video .pause-icon {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 15px;
 }
 .testimonial-wrapper .testimonial .testimonial__info {
   text-align: justify;
@@ -285,7 +305,7 @@ footer .footer-inner-wrapper .social-media div img {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    max-width: 100%;
+    max-width: 1160px;
   }
   .testimonial-wrapper .testimonial .testimonial__video {
     width: 45%;
@@ -316,7 +336,7 @@ footer .footer-inner-wrapper .social-media div img {
 #grid {
   position: relative;
   width: 100%;
-  max-width: 786px;
+  max-width: 886px;
   margin: 20px auto;
   padding: 0;
   /* Clears unordered list default of 40px */
@@ -506,7 +526,7 @@ footer .footer-inner-wrapper .social-media div img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 0 15px;
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 3;
@@ -525,8 +545,14 @@ footer .footer-inner-wrapper .social-media div img {
   z-index: 2;
 }
 .popup-video-wrapper .popup-video-inner-wrapper video {
+  position: absolute;
+  z-index: -1;
   width: 100%;
-  margin-top: 250px;
+  max-width: 1500px;
+  height: 100vh;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .mos-card-wrapper {
@@ -656,11 +682,14 @@ footer .footer-inner-wrapper .social-media div img {
   z-index: 4;
 }
 
+@media (min-width: 768px) {
+  #pre-loader {
+    background-size: 100%;
+  }
+}
 .home-page-wrapper {
   width: 100vw;
-  max-width: 1400px;
   min-height: 100%;
-  margin: 0 auto;
 }
 .home-page-wrapper .home-page-jumbotron {
   position: relative;
@@ -669,6 +698,7 @@ footer .footer-inner-wrapper .social-media div img {
   align-items: center;
   width: 100%;
   height: calc(100vh - 114px);
+  max-height: 800px;
   overflow: hidden;
 }
 .home-page-wrapper .home-page-jumbotron .jumbotron-overlay {
@@ -689,7 +719,13 @@ footer .footer-inner-wrapper .social-media div img {
   color: #ffd530;
 }
 .home-page-wrapper .home-page-jumbotron video {
-  height: 100%;
+  position: absolute;
+  z-index: -1;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .home-page-wrapper .email-request {
   text-align: center;
@@ -734,9 +770,7 @@ footer .footer-inner-wrapper .social-media div img {
 }
 .about-page {
   position: relative;
-  max-width: 1400px;
   min-height: 100vh;
-  margin: 0 auto;
   background-color: #121212;
 }
 .about-page .image {
@@ -777,7 +811,9 @@ footer .footer-inner-wrapper .social-media div img {
   }
   .about-page .bio {
     width: 100%;
+    max-width: 1700px;
     height: 100vh;
+    margin: 0 auto;
     padding: 0;
     background-size: 95% 100%;
     background-position: center;
@@ -794,9 +830,7 @@ footer .footer-inner-wrapper .social-media div img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 1400px;
   min-height: 100vh;
-  margin: 0 auto;
   background-color: #bfb8ab;
 }
 .mos-page .mos-page__intro {

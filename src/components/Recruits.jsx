@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import RecruitCard from "../components/RecruitCard";
 import Image from "../images/recruit.svg";
+import TestImage from "../images/test-recruit.svg";
 
 export default function Recruits(props) {
   ///// Checks for screen width changes
@@ -45,14 +46,15 @@ export default function Recruits(props) {
     <div className="background-yellow recruit-wrapper">
       <h1> MEET THE RECRUITS</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Metus aliquam
-        eleifend mi in nulla posuere sollicitudin. Facilisis volutpat est velit
-        egestas.
+        Here are the soldiers that I've had the Honor of enlisting into the New
+        York Army National Guard. Like every person you meet on a day to day
+        basis, every one of my soldiers has a unique story and reason for
+        wanting to join the greatest force in New York. Find out a little about
+        them below.
       </p>
       <Slider className="slider" {...settings}>
         <RecruitCard
-          recruitImage={Image}
+          recruitImage={TestImage}
           recruitName="Angel Gonzalez"
           doe="12/11/20"
           rank="Captian"

@@ -6,8 +6,25 @@
     max-width: 508px;
 
     .testimonial__video {
+      position: relative;
       width: 100%;
       margin-bottom: 20px;
+
+      .play-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+      }
+
+      .pause-icon {
+        display: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 15px;
+      }
     }
 
     .testimonial__info {
@@ -24,7 +41,7 @@
       display: flex;
       justify-content: space-around;
       align-items: flex-start;
-      max-width: 100%;
+      max-width: 1160px;
 
       .testimonial__video {
         width: 45%;

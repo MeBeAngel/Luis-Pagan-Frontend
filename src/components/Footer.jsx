@@ -23,10 +23,10 @@ export default function Footer(props) {
         </Link>
       </div>
       <div className="national-gaurd-contact-info bold">
-        <p>New York National Guard Recruitment</p>
-        <p>2 Quincy PI ROOM 213, Yonkers, NY 10701</p>
-        <p>(347) 852-2664</p>
-        <p>National Guard Email Address</p>
+        <p>New York Army National Guard Recruiting & Retention</p>
+        <p>955 Washington Ave, Peekskill, NY 10566</p>
+        <p>(347) 865-8226</p>
+        <p>montalvo.l.pagan.mil@mail.mil</p>
       </div>
       <div className="social-media bold">
         <p>CONNECT WITH ME</p>

@@ -12,3 +12,10 @@
     background-repeat: no-repeat;
     z-index: 4;
 }
+
+
+@media(min-width:768px) {
+    #pre-loader {
+        background-size: 100%;
+    }
+}

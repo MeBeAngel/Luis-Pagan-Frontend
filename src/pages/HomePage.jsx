@@ -7,9 +7,15 @@ import Button from "../components/Button";
 
 export default function HomePage() {
 
+  ////////// Media Query Vars //////////
+
   const isMobile = useMediaQuery({query: '(max-width: 767px)'});
   const isTablet = useMediaQuery({query: '(min-width: 768px)'});
   const biggerScreens = useMediaQuery({query: '(min-width: 1200px)'});
+
+  /////////////////////////////////////
+
+
 
   function updateBtn() {
     if(biggerScreens) {
@@ -20,11 +26,16 @@ export default function HomePage() {
     }
   }
 
+
+  ///////// Popup video logic //////////
+
+  var htmlElement = document.querySelector("html");
+
   // Opens popup video overlay, scrolls to top of page and plays video
   function openOverlay() {
     const popupVideo = document.querySelector("#popup-video");
     document.querySelector(".popup-video-wrapper").style.display = "block";
-    document.body.style.overflow = "hidden";
+    htmlElement.style.overflowY = "hidden";
     window.scrollTo(0, 0);
     popupVideo.play();
   }
@@ -33,10 +44,14 @@ export default function HomePage() {
   function closeOverlay() {
     const popupVideo = document.querySelector("#popup-video");
     document.querySelector(".popup-video-wrapper").style.display = "none";
-    document.body.style.overflow = "visible";
+    htmlElement.style.overflowY = "visible";
     popupVideo.pause();
     popupVideo.currentTime = 0;
   }
+
+  /////////////////////////////////////
+
+
 
   return (
     <div className="home-page-wrapper">
@@ -45,8 +60,9 @@ export default function HomePage() {
           <i className="fas fa-times" onClick={closeOverlay}></i>
           <video
             id="popup-video"
-            controls="controls"
-            src="https://luis-pagan.nyc3.digitaloceanspaces.com/Nation_Gaurd_Video.mp4"
+            //controls="controls"
+            //muted="muted"
+            src="https://luis-pagan.nyc3.digitaloceanspaces.com/NG-main.mp4"
           ></video>
         </div>
       </div>
@@ -54,7 +70,7 @@ export default function HomePage() {
       <section className="home-page-jumbotron">
         <div className="jumbotron-overlay">
           <div>
-            <h1>Find the Perfect MOS for you.</h1>
+            <h1>Find the Perfect JOB for you.</h1>
             <Button
               btnClass={updateBtn()}
               btnText="WATCH NOW"
@@ -66,7 +82,7 @@ export default function HomePage() {
           //autoplay="autoplay"
           muted="muted"
           loop="loop"
-          src="https://luis-pagan.nyc3.digitaloceanspaces.com/Nation_Gaurd_Video.mp4"
+          src="https://luis-pagan.nyc3.digitaloceanspaces.com/NG-main.mp4"
         ></video>
       </section>
 
@@ -92,6 +108,3 @@ export default function HomePage() {
     </div>
   );
 }
-
-
-// https://luis-pagan.s3.us-east-2.amazonaws.com/Nation_Gaurd_Video.mp4

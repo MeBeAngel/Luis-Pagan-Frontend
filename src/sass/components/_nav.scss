@@ -3,8 +3,7 @@
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 100vw;
-  max-width: 1416px;
+  width: 100%;
   z-index: 3;
   background-color: $black;
 }
@@ -96,18 +95,6 @@ nav {
           margin-right: 0;
         }
       }
-    }
-  }
-}
-
-@media (min-width: 1400px) {
-  nav {
-    img {
-      left: 25px;
-    }
-
-    h1 {
-      left: 135px;
     }
   }
 }
