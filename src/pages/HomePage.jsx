@@ -14,13 +14,7 @@ export default function HomePage() {
 
   /////////////////////////////////////
 
-  function updateBtn() {
-    if (biggerScreens) {
-      return "med-btn yellow-btn";
-    } else {
-      return "sm-btn yellow-btn";
-    }
-  }
+
 
   ///////// Popup video logic //////////
 
@@ -65,14 +59,14 @@ export default function HomePage() {
           <div>
             <h1>Find the Perfect JOB for you.</h1>
             <Button
-              btnClass={updateBtn()}
+              btnClass="jumbotron-btn yellow-btn"
               btnText="WATCH NOW"
               onClick={openOverlay}
             />
           </div>
         </div>
         <video
-          //autoplay="autoplay"
+          autoplay="autoplay"
           muted="muted"
           loop="loop"
           src="https://luis-pagan.nyc3.digitaloceanspaces.com/NG-main.mp4"

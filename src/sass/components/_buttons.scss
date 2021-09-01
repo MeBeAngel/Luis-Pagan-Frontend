@@ -1,33 +1,63 @@
 button {
-    border: none;
-    border-radius: 5px;
-    padding: 0 10px;
-    font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-weight: bold;
 }
 
 .sm-btn {
-    height: 46px;
+  height: 46px;
 }
 
 .med-btn {
-    height: 66px;
-    font-size: 24px;
+  height: 66px;
+  font-size: 24px;
 }
 
 .lg-btn {
-    height: 66px;
-    font-size: 36px;
+  height: 66px;
+  font-size: 36px;
 }
 
 .email-btn {
-    height: 35px;
-    width: 250px;
+  height: 35px;
+  width: 250px;
+}
+
+.nav-btn {
+  height: 46px;
+}
+
+.jumbotron-btn {
+  height: 46px;
 }
 
 .yellow-btn {
-    background-color: $yellow;
+  background-color: $yellow;
 }
 
 .black-btn {
-    background-color: $black;
+  background-color: $black;
+}
+
+
+
+@media (min-width: 1000px) {
+  .nav-btn {
+    width: 200px;
+    height: 65px;
+    font-size: 20px;
+  }
+
+  .jumbotron-btn {
+    width: 180px;
+    height: 70px;
+    font-size: 20px;
+  }
+
+  .email-btn {
+    height: 55px;
+    width: 350px;
+    font-size: 18px;
+  }
 }

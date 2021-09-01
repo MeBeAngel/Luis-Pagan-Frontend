@@ -38,6 +38,11 @@ h1, h2, h3, h4, h5, h6, p, button, span {
   font-family: "Nunito Sans", sans-serif;
 }
 
+@media (min-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+}
 .bold {
   font-weight: bold;
 }
@@ -66,10 +71,15 @@ body {
   position: relative;
   width: 100%;
   min-height: 100%;
-  padding-top: 114px;
+  padding-top: 85px;
   background-color: #121212;
 }
 
+@media (min-width: 1000px) {
+  body {
+    padding-top: 95px;
+  }
+}
 .show {
   display: block;
 }
@@ -104,6 +114,14 @@ button {
   width: 250px;
 }
 
+.nav-btn {
+  height: 46px;
+}
+
+.jumbotron-btn {
+  height: 46px;
+}
+
 .yellow-btn {
   background-color: #ffd530;
 }
@@ -112,7 +130,27 @@ button {
   background-color: #121212;
 }
 
+@media (min-width: 1000px) {
+  .nav-btn {
+    width: 200px;
+    height: 65px;
+    font-size: 20px;
+  }
+
+  .jumbotron-btn {
+    width: 180px;
+    height: 70px;
+    font-size: 20px;
+  }
+
+  .email-btn {
+    height: 55px;
+    width: 350px;
+    font-size: 18px;
+  }
+}
 header {
+  display: none;
   text-align: right;
   margin: 0 auto;
   padding: 10px 20px;
@@ -135,9 +173,12 @@ header .social-media div img:last-of-type {
 .nav-wrapper {
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  height: 85px;
   z-index: 3;
   background-color: #121212;
 }
@@ -147,15 +188,16 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 75px;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
-  padding: 20px 20px;
+  padding: 20px 15px;
   z-index: 3;
 }
 nav img {
   position: absolute;
   left: 15px;
-  top: 0;
+  top: 5px;
   width: 90px;
 }
 nav button {
@@ -167,7 +209,7 @@ nav button {
 nav h1 {
   position: absolute;
   top: 50%;
-  left: 125px;
+  left: 165px;
   transform: translate(0, -50%);
   color: #ffd530;
   font-size: 24px;
@@ -187,8 +229,8 @@ nav .desktop-links {
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  height: calc(100vh - 114px);
-  margin-top: 114px;
+  height: calc(100vh - 85px);
+  margin-top: 85px;
   padding: 40px 0 0 15px;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.9);
@@ -199,21 +241,45 @@ nav .desktop-links {
   color: #fefefe;
 }
 
-@media (min-width: 768px) {
-  nav .drop-down {
+@media (min-width: 1000px) {
+  .nav-wrapper {
+    width: 100%;
+    height: 95px;
+    z-index: 3;
+    background-color: #121212;
+  }
+  .nav-wrapper nav {
+    padding: 20px 55px;
+  }
+  .nav-wrapper nav img {
+    top: 5px;
+    left: 55px;
+    width: 100px;
+  }
+  .nav-wrapper nav button {
+    left: 165px;
+  }
+  .nav-wrapper nav h1 {
+    left: 175px;
+    font-size: 32px;
+  }
+  .nav-wrapper nav .desktop-links p {
+    font-size: 32px;
+  }
+  .nav-wrapper nav .drop-down {
     display: none;
   }
-  nav .desktop-links {
+  .nav-wrapper nav .desktop-links {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  nav .desktop-links .link {
+  .nav-wrapper nav .desktop-links .link {
     margin-right: 35px;
     font-size: 24px;
     color: #ffd530;
   }
-  nav .desktop-links .link:last-of-type {
+  .nav-wrapper nav .desktop-links .link:last-of-type {
     margin-right: 0;
   }
 }
@@ -232,11 +298,14 @@ footer .footer-inner-wrapper p {
   line-height: 1.2rem;
   color: #ffd530;
 }
+footer .footer-inner-wrapper .quick-links {
+  display: none;
+}
 footer .footer-inner-wrapper .quick-links .quick-link {
   color: #bfb8ab;
 }
 footer .footer-inner-wrapper .national-gaurd-contact-info {
-  text-align: center;
+  text-align: left;
 }
 footer .footer-inner-wrapper .social-media {
   text-align: center;
@@ -265,6 +334,14 @@ footer .footer-inner-wrapper .social-media div img {
   footer .footer-inner-wrapper .social-media div img {
     width: 25px;
     height: 25px;
+  }
+}
+@media (min-width: 1000px) {
+  footer .footer-inner-wrapper .quick-links {
+    display: block;
+  }
+  footer .footer-inner-wrapper .national-gaurd-contact-info {
+    text-align: center;
   }
 }
 .testimonial-wrapper {
@@ -353,6 +430,11 @@ footer .footer-inner-wrapper .social-media div img {
 .benefits p {
   font-weight: bold;
   margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .benefits p {
+    font-size: 24px;
+  }
 }
 
 #grid {
@@ -719,8 +801,8 @@ footer .footer-inner-wrapper .social-media div img {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: calc(100vh - 114px);
-  max-height: 800px;
+  height: calc(100vh - 85px);
+  max-height: 1200px;
   overflow: hidden;
 }
 .home-page-wrapper .home-page-jumbotron .jumbotron-overlay {
@@ -767,7 +849,7 @@ footer .footer-inner-wrapper .social-media div img {
   border-radius: 5px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .home-page-wrapper .home-page-jumbotron .jumbotron-overlay h1 {
     font-size: 70px;
     color: #ffd530;
@@ -778,14 +860,15 @@ footer .footer-inner-wrapper .social-media div img {
     background-color: #bfb8ab;
   }
   .home-page-wrapper .email-request p {
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
   }
   .home-page-wrapper .email-request input {
     text-align: center;
     border: none;
-    width: 250px;
-    height: 35px;
+    width: 350px;
+    height: 55px;
     margin-bottom: 10px;
     border-radius: 5px;
   }
@@ -863,7 +946,7 @@ footer .footer-inner-wrapper .social-media div img {
 }
 .mos-page .mos-page__intro p {
   text-align: justify;
-  max-width: 1000px;
+  max-width: 816px;
   margin: 0 auto 15px auto;
   font-size: 16px;
   color: #121212;

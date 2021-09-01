@@ -8,8 +8,8 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: calc(100vh - 114px);
-    max-height: 800px;
+    height: calc(100vh - 85px);
+    max-height: 1200px;
     overflow: hidden;
 
     .jumbotron-overlay {
@@ -63,7 +63,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .home-page-wrapper {
     .home-page-jumbotron {
       .jumbotron-overlay {
@@ -80,6 +80,7 @@
       background-color: $gray;
 
       p {
+        font-size: 20px;
         font-weight: bold;
         margin-bottom: 10px;
       }
@@ -87,8 +88,8 @@
       input {
         text-align: center;
         border: none;
-        width: 250px;
-        height: 35px;
+        width: 350px;
+        height: 55px;
         margin-bottom: 10px;
         border-radius: 5px;
       }

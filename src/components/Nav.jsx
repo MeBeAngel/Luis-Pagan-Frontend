@@ -59,21 +59,6 @@ export default function Nav(props) {
 
   return (
     <div className="nav-wrapper">
-      <header className="background-black">
-        <div className="social-media bold">
-          <div>
-            <a href="https://www.facebook.com/">
-              <img src={FacebookYellow} alt="" />
-            </a>
-            <a href="https://www.instagram.com/">
-              <img src={InstagramYellow} alt="" />
-            </a>
-            <a href="https://www.linkedin.com/">
-              <img src={LinkedinYellow} alt="" />
-            </a>
-          </div>
-        </div>
-      </header>
 
       <nav className="background-black">
         <Link to="/">
@@ -81,7 +66,7 @@ export default function Nav(props) {
         </Link>
         <Link to="/form">
           <Btn
-            btnClass={btnLogic("sm-btn yellow-btn")}
+            btnClass={btnLogic("nav-btn yellow-btn")}
             btnText={btnLogic("Get Started")}
           />
         </Link>
