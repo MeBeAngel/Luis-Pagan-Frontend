@@ -60,8 +60,8 @@ export default function HomePage() {
           <i className="fas fa-times" onClick={closeOverlay}></i>
           <video
             id="popup-video"
-            //controls="controls"
-            //muted="muted"
+            controls="controls"
+            muted="muted"
             src="https://luis-pagan.nyc3.digitaloceanspaces.com/NG-main.mp4"
           ></video>
         </div>
