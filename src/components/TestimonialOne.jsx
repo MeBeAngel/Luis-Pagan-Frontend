@@ -17,9 +17,9 @@ export default function TestimonialOne(props) {
   }, []);
 
   function play(e) {
-    let video = e.target.parentNode.children[0];
-    let pause = e.target.parentNode.children[2];
-    e.target.style.display = "none";
+    let video = e.target.parentNode.parentNode.children[0];
+    let pause = e.target.parentNode.parentNode.children[2];
+    e.target.parentNode.style.display = "none";
     pause.style.display = "block";
     video.play();
   }
@@ -28,7 +28,7 @@ export default function TestimonialOne(props) {
     let video = e.target.parentNode.children[0];
     let play = e.target.parentNode.children[1];
     e.target.style.display = "none";
-    play.style.display = "block";
+    play.style.display = "flex";
     video.pause();
   }
 
@@ -52,20 +52,20 @@ export default function TestimonialOne(props) {
             muted="muted"
             src="https://luis-pagan.nyc3.digitaloceanspaces.com/testimony-placeholder2.mp4"
           ></video>
-          <img className="play-icon" src={PlayIcon} alt="" onClick={play} />
+          <div className="play-icon">
+            <img src={PlayIcon} alt="" onClick={play} />
+          </div>
           <img className="pause-icon" src={PauseIcon} alt="" onClick={pause} />
           <div className="reset-icon">
             <img src={ResetIcon} alt="" onClick={reset} />
           </div>
         </div>
         <div className="testimonial__info gray bold">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu
-            ipsum non sapien lacinia pulvinar. Nulla lacus tellus, dapibus et
-            tristique quis, porttitor sit amet sem. Ut turpis quam, feugiat sit
-            amet viverra iaculis, vehicula id elit. Sed lectus est, laoreet vel
-            malesuada sed, suscipit ut nibh. Praesent consectetur elit vitae
-            dolor vehicula gravida. Duis volutpat velit eget purus dapibus.
+          <p className={props.bioLeftClass}>
+            Recruit Testomonial: Angel Gonzalez - 10/20
+          </p>
+          <p className={props.bioRightClass}>
+            Recruit Testomonial: Shane Rios - 10/20
           </p>
         </div>
         <div className={`testimonial__video ${props.rightVideo}`}>
@@ -73,9 +73,12 @@ export default function TestimonialOne(props) {
             class="video"
             width="100%"
             height="100%"
+            muted="muted"
             src="https://luis-pagan.nyc3.digitaloceanspaces.com/testimony-placeholder2.mp4"
           ></video>
-          <img className="play-icon" src={PlayIcon} alt="" onClick={play} />
+          <div className="play-icon">
+            <img src={PlayIcon} alt="" onClick={play} />
+          </div>
           <img className="pause-icon" src={PauseIcon} alt="" onClick={pause} />
           <div className="reset-icon">
             <img src={ResetIcon} alt="" onClick={reset} />

@@ -1,31 +1,26 @@
 import React from "react";
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from "react-responsive";
 import TestimonialOne from "../components/TestimonialOne";
 import Benefits from "../components/Benefits";
 import Recruits from "../components/Recruits";
 import Button from "../components/Button";
 
 export default function HomePage() {
-
   ////////// Media Query Vars //////////
 
-  const isMobile = useMediaQuery({query: '(max-width: 767px)'});
-  const isTablet = useMediaQuery({query: '(min-width: 768px)'});
-  const biggerScreens = useMediaQuery({query: '(min-width: 1200px)'});
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
+  const biggerScreens = useMediaQuery({ query: "(min-width: 1200px)" });
 
   /////////////////////////////////////
 
-
-
   function updateBtn() {
-    if(biggerScreens) {
+    if (biggerScreens) {
       return "med-btn yellow-btn";
-    }
-    else {
+    } else {
       return "sm-btn yellow-btn";
     }
   }
-
 
   ///////// Popup video logic //////////
 
@@ -50,8 +45,6 @@ export default function HomePage() {
   }
 
   /////////////////////////////////////
-
-
 
   return (
     <div className="home-page-wrapper">
@@ -88,15 +81,23 @@ export default function HomePage() {
 
       <Benefits />
 
-      <TestimonialOne class="background-white" title="TESTIMONIAL" rightVideo="hide" />
+      <TestimonialOne
+        class="background-gray"
+        title="TESTIMONIAL"
+        rightVideo="hide"
+        bioLeftClass="black"
+        bioRightClass="hide"
+      />
 
       <Recruits />
 
       <TestimonialOne
-        class="background-black gray"
+        class="background-black"
         title="TESTIMONIAL"
         rightVideo={isMobile && "hide"}
         leftVideo={isTablet && "hide"}
+        bioLeftClass="hide"
+        bioRightClass="gray"
       />
 
       <section className="email-request">
