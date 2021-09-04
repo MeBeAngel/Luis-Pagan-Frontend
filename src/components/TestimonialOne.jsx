@@ -61,12 +61,32 @@ export default function TestimonialOne(props) {
           </div>
         </div>
         <div className="testimonial__info gray bold">
-          <p className={props.bioLeftClass}>
-            Recruit Testomonial: Angel Gonzalez - 10/20
-          </p>
-          <p className={props.bioRightClass}>
-            Recruit Testomonial: Shane Rios - 10/20
-          </p>
+          <div className={`info-block ${props.bioLeftClass}`}>
+            <p className="quote">
+              "WITTY QUOTE FROM THE TESTIMONY THAT SHOULD GARNER FURTHER
+              ATTENTION TO ACTUALLY WATCH THE VIDEO. HOPEFULLY THIS WOULD KEEP
+              VIEWERS ON THE SITE FOR LONGER AND INSPIRE THEM TO REQUEST MORE
+              INFO."
+            </p>
+            <p className="name">
+              name <span className="background-black"></span> Angel Gonzalez
+            </p>
+            <p className="date">
+              date <span className="background-black"></span>9/02/21
+            </p>
+          </div>
+          <div className={`info-block ${props.bioRightClass}`}>
+            <p className="quote">
+              "WITTY QUOTE FROM THE TESTIMONY THAT SHOULD GARNER FURTHER
+              ATTENTION."
+            </p>
+            <p className="name">
+              name <span className="background-gray"></span> Angel Gonzalez
+            </p>
+            <p className="date">
+              date <span className="background-gray"></span>9/02/21
+            </p>
+          </div>
         </div>
         <div className={`testimonial__video ${props.rightVideo}`}>
           <video

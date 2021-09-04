@@ -52,7 +52,6 @@ export default function App() {
         <Route path="/MOS" component={MosPage} />
         <Route path="/Form" component={FormPage} />
       </Switch>
-
       <Footer />
     </div>
   );

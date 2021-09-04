@@ -33,7 +33,7 @@
 }
 
 
-@media(min-width: 1000px) {
+@media(min-width: 1200px) {
   .about-page {
     background-size: cover;
     background-position: center;
@@ -46,8 +46,8 @@
     }
   
     .bio {
-      width: 100%;
-      max-width: 1700px;
+      width: 95%;
+      //max-width: 2000px;
       height: 100vh;
       margin: 0 auto; 
       padding: 0;

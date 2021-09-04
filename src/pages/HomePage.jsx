@@ -10,7 +10,8 @@ export default function HomePage() {
 
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
-  const biggerScreens = useMediaQuery({ query: "(min-width: 1200px)" });
+  const isMobileOrTablet = useMediaQuery({ query: "(max-width: 999px)" });
+  const biggerScreens = useMediaQuery({ query: "(min-width: 1000px)" });
 
   /////////////////////////////////////
 
@@ -88,8 +89,8 @@ export default function HomePage() {
       <TestimonialOne
         class="background-black"
         title="TESTIMONIAL"
-        rightVideo={isMobile && "hide"}
-        leftVideo={isTablet && "hide"}
+        rightVideo={isMobileOrTablet && "hide"}
+        leftVideo={biggerScreens && "hide"}
         bioLeftClass="hide"
         bioRightClass="gray"
       />

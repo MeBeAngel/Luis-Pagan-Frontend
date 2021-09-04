@@ -3,6 +3,10 @@ button {
   border-radius: 5px;
   padding: 0 10px;
   font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .sm-btn {
@@ -32,12 +36,22 @@ button {
   height: 46px;
 }
 
+.form-btn {
+  font-size: 20px;
+  height: 55px;
+  width: 250px;
+}
+
 .yellow-btn {
   background-color: $yellow;
 }
 
 .black-btn {
   background-color: $black;
+}
+
+.btn-shadow {
+  box-shadow: 7px 7px 8px rgba($color: #000000, $alpha: 0.3);
 }
 
 
