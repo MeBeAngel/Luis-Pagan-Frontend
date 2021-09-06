@@ -1,3 +1,17 @@
+*, p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+.link-reset {
+  text-decoration: none;
+}
+
 .yellow {
   color: #ffd530;
 }
@@ -34,33 +48,6 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-h1, h2, h3, h4, h5, h6, p, button, span {
-  font-family: "Nunito Sans", sans-serif;
-}
-
-@media (min-width: 768px) {
-  h1 {
-    font-size: 40px;
-  }
-}
-.bold {
-  font-weight: bold;
-}
-
-*, p, h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 16px;
-}
-
-.link-reset {
-  text-decoration: none;
-}
-
 html {
   width: 100vw;
   min-height: 100vh;
@@ -86,6 +73,24 @@ body {
 
 .hide {
   display: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, button, span {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+.bold {
+  font-weight: bold;
 }
 
 button {
@@ -415,17 +420,19 @@ footer .footer-inner-wrapper .social-media div img {
   width: 90px;
 }
 .testimonial-wrapper .testimonial .testimonial__info .info-block .quote {
-  text-align: left;
+  text-align: center;
   margin-bottom: 20px;
 }
-.testimonial-wrapper .testimonial .testimonial__info .info-block .name, .testimonial-wrapper .testimonial .testimonial__info .info-block .date {
+.testimonial-wrapper .testimonial .testimonial__info .info-block .name,
+.testimonial-wrapper .testimonial .testimonial__info .info-block .date {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   font-weight: bold;
   text-transform: uppercase;
 }
-.testimonial-wrapper .testimonial .testimonial__info .info-block .name span, .testimonial-wrapper .testimonial .testimonial__info .info-block .date span {
+.testimonial-wrapper .testimonial .testimonial__info .info-block .name span,
+.testimonial-wrapper .testimonial .testimonial__info .info-block .date span {
   display: inline-block;
   width: 10px;
   height: 20px;
@@ -433,6 +440,22 @@ footer .footer-inner-wrapper .social-media div img {
 }
 .testimonial-wrapper .testimonial .testimonial__info .info-block .name {
   margin-bottom: 10px;
+}
+
+.black-texture-bg {
+  padding-top: 50px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("./images/testimony-bg-black.svg");
+}
+
+.gray-texture-bg {
+  padding-bottom: 50px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("./images/testimony-bg-gray.svg");
 }
 
 @media (min-width: 1000px) {
@@ -455,11 +478,28 @@ footer .footer-inner-wrapper .social-media div img {
   .testimonial-wrapper .testimonial .testimonial__info .info-block .quote {
     text-align: left;
   }
-  .testimonial-wrapper .testimonial .testimonial__info .info-block .name, .testimonial-wrapper .testimonial .testimonial__info .info-block .date {
+  .testimonial-wrapper .testimonial .testimonial__info .info-block .name,
+.testimonial-wrapper .testimonial .testimonial__info .info-block .date {
     padding-left: 0;
   }
   .testimonial-wrapper .testimonial .testimonial__info .info-block .name {
     margin-bottom: 10px;
+  }
+
+  .black-texture-bg {
+    padding-top: 50px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("./images/testimony-bg-black.svg");
+  }
+
+  .gray-texture-bg {
+    padding-bottom: 50px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("./images/testimony-bg-gray.svg");
   }
 }
 .benefits {
@@ -1032,6 +1072,20 @@ footer .footer-inner-wrapper .social-media div img {
   min-height: 100vh;
   background-color: #bfb8ab;
 }
+.form-page .form-page-intro {
+  text-align: center;
+  width: 100%;
+  padding: 30px 15px 15px 15px;
+  background-color: #ffd530;
+}
+.form-page .form-page-intro p {
+  text-align: justify;
+  max-width: 816px;
+  margin: 0 auto 15px auto;
+  font-size: 16px;
+  color: #121212;
+  font-weight: bold;
+}
 .form-page form {
   height: 100%;
   padding: 40px 15px;
@@ -1044,6 +1098,7 @@ footer .footer-inner-wrapper .social-media div img {
   text-align: center;
   font-weight: bold;
   margin-bottom: 15px;
+  text-transform: uppercase;
 }
 .form-page form .form-question .sub-question {
   font-style: italic;
@@ -1054,19 +1109,16 @@ footer .footer-inner-wrapper .social-media div img {
   margin: 0 auto;
   box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.3);
 }
-.form-page form .form-question textarea {
+.form-page form .form-question input, .form-page form .form-question select, .form-page form .form-question textarea {
   font-weight: bold;
   background-color: #ffd530;
   border: none;
 }
-.form-page form .form-question textarea::placeholder {
+.form-page form .form-question input::placeholder, .form-page form .form-question textarea::placeholder {
   opacity: 0.3;
 }
-.form-page form .form-question select {
+.form-page form .form-question input, .form-page form .form-question select {
   height: 50px;
-  font-weight: bold;
-  background-color: #ffd530;
-  border: none;
 }
 
 /*# sourceMappingURL=index.css.map */

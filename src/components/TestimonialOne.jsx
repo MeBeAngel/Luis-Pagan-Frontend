@@ -1,7 +1,7 @@
 import { React, useEffect } from "react";
 import PlayIcon from "../images/play.svg";
 import PauseIcon from "../images/pause.svg";
-import ResetIcon from "../images/reset.svg";
+import ResetIcon from "../images/reset.svg";  
 
 export default function TestimonialOne(props) {
   useEffect(() => {

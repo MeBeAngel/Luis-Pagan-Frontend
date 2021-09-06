@@ -77,7 +77,7 @@ export default function HomePage() {
       <Benefits />
 
       <TestimonialOne
-        class="background-gray"
+        class="background-gray gray-texture-bg"
         title="TESTIMONIAL"
         rightVideo="hide"
         bioLeftClass="black"
@@ -87,7 +87,7 @@ export default function HomePage() {
       <Recruits />
 
       <TestimonialOne
-        class="background-black"
+        class="background-black black-texture-bg"
         title="TESTIMONIAL"
         rightVideo={isMobileOrTablet && "hide"}
         leftVideo={biggerScreens && "hide"}

@@ -4,6 +4,22 @@
   min-height: 100vh;
   background-color: $gray;
 
+  .form-page-intro {
+    text-align: center;
+    width: 100%;
+    padding: 30px 15px 15px 15px;
+    background-color: $yellow;
+
+    p {
+        text-align: justify;
+        max-width: 816px;
+        margin: 0 auto 15px auto;
+        font-size: 16px;
+        color: $black;
+        font-weight: bold;
+    }
+}
+
   form {
     height: 100%;
     padding: 40px 15px;
@@ -17,6 +33,7 @@
         text-align: center;
         font-weight: bold;
         margin-bottom: 15px;
+        text-transform: uppercase;
       }
 
       .sub-question {
@@ -30,21 +47,20 @@
         box-shadow: 7px 7px 12px rgba($color: #000000, $alpha: 0.3);
       }
 
-      textarea {
+      input, select, textarea {
         font-weight: bold;
         background-color: $yellow;
         border: none;
+      }
 
+      input, textarea {
         &::placeholder {
             opacity: 0.3;
         }
       }
 
-      select {
+      input, select {
           height: 50px;
-          font-weight: bold;
-          background-color: $yellow;
-          border: none;
       }
     }
   }

@@ -20,7 +20,7 @@ export default function FormSelect(props) {
 
 // Form selector for age
 export function FormSelectNum(props) {
-  let num = 99;
+  let num = props.num;
   let array = [];
 
   for (let i = 1; i <= num; i++) {

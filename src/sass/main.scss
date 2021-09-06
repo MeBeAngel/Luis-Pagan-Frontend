@@ -4,10 +4,10 @@
 @import './abstracts/_variables.scss';
 
 //Base
-@import './base/_colors.scss';
-@import './base/_typography.scss';
 @import './base/_reset.scss';
+@import './base/_colors.scss';
 @import './base/_base.scss';
+@import './base/_typography.scss';
 
 //Components
 @import './components/_buttons.scss';

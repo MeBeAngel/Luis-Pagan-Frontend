@@ -69,12 +69,13 @@
     .testimonial__info {
       .info-block {
         .quote {
-          text-align: left;
+          text-align: center;
           margin-bottom: 20px;
         }
-        .name, .date {
+        .name,
+        .date {
           display: flex;
-          justify-content: flex-start;
+          justify-content: center;
           align-items: center;
           //padding-left: 20%;
           font-weight: bold;
@@ -93,6 +94,22 @@
       }
     }
   }
+}
+
+.black-texture-bg {
+  padding-top: 50px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("./images/testimony-bg-black.svg");
+}
+
+.gray-texture-bg {
+  padding-bottom: 50px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("./images/testimony-bg-gray.svg");
 }
 
 @media (min-width: 1000px) {
@@ -117,15 +134,32 @@
           .quote {
             text-align: left;
           }
-          .name, .date {
+          .name,
+          .date {
             padding-left: 0;
           }
-  
+
           .name {
             margin-bottom: 10px;
           }
         }
       }
     }
+  }
+
+  .black-texture-bg {
+    padding-top: 50px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("./images/testimony-bg-black.svg");
+  }
+  
+  .gray-texture-bg {
+    padding-bottom: 50px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("./images/testimony-bg-gray.svg");
   }
 }

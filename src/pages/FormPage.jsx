@@ -8,15 +8,62 @@ import Button from "../components/Button";
 export default function FormPage(props) {
   return (
     <div className="form-page">
+      <div className="form-page-intro">
+      <h1>Almost There!</h1>
+        <p>
+          You’ve taken the first crucial step alone, but rest assured that we
+          will take the rest of them together. Let me know a little bit about
+          yourself so we can get to know each other, and more importantly so we
+          can start the journey toward a more rewarding future. A few quick
+          questions will help me know you a little bit and aid in the rest of
+          the steps needed to move forward. I can’t wait to help guide you as we
+          help each other attain more!
+        </p>
+      </div>
       <form>
+        <div className="form-question">
+          <p>Full Name</p>
+          <input
+            type="name"
+            class="form-control"
+            id="name"
+            placeholder="Type Here.."
+          />
+        </div>
+
+        <div className="form-question">
+          <p>email</p>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Type Here.."
+          />
+        </div>
+
         <FormSelect question="ARE YOU A U.S. CITIZEN OR PERMANENT RESIDENT OF THE U.S.?" />
-        <FormSelectNum valueName="age" question="WHAT IS YOUR AGE?" />
+        <FormSelectNum num="43" valueName="age" question="WHAT IS YOUR AGE?" />
         <FormSelect question="DO YOU CURRENTLY HAVE ANY MEDICAL ISSUES OR CONCERNS?" />
 
-        <FormSelectTextArea id="medicalConcerns" rows="3" question="IF SO, PLEASE EXPLAIN FURTHER." questionClass="sub-question" placeholder="Type Here..." />
+        <FormSelectTextArea
+          id="medicalConcerns"
+          rows="3"
+          question="IF SO, PLEASE EXPLAIN FURTHER."
+          questionClass="sub-question"
+          placeholder="Type Here.."
+        />
 
         <FormSelect question="HAVE YOU EVER HAD SURGERY OR BROKEN ANY BONES?" />
-        <FormSelect question="DO YOU HAVE ASTHMA?" />
+
+        <FormSelectTextArea
+          id="surgery"
+          rows="3"
+          question="IF SO, PLEASE EXPLAIN FURTHER."
+          questionClass="sub-question"
+          placeholder="Type Here.."
+        />
+
+        <FormSelect question="DO YOU currently HAVE or have you ever had ASTHMA?" />
         <FormSelect question="HAVE YOU EVER BEEN PROCESSED AT MEPS?" />
         <FormSelect question="HAVE YOU STEPPED INTO A RECRUITER’S OFFICE? (FOR ANY SERVICE BRANCH)" />
         <FormSelect question="HAVE YOU SERVED IN THE MILITARY PREVIOUSLY?" />
@@ -32,7 +79,11 @@ export default function FormPage(props) {
           </select>
         </div>
 
-        <FormSelectNum valueName="credits" question="IF YOU HAVE SOME COLLEGE - HOW MANY CREDITS?" />
+        <FormSelectNum
+          num="150"
+          valueName="credits"
+          question="IF YOU HAVE SOME COLLEGE - HOW MANY CREDITS?"
+        />
 
         <div className="form-question">
           <p>WHAT IS YOUR CURRENT MARITAL STATUS?</p>
@@ -46,11 +97,21 @@ export default function FormPage(props) {
 
         <FormSelect question="DO YOU HAVE ANY CHILDREN?" />
 
-        <FormSelectNum valueName="numOfChildren" question="IF YOU ANSWERED YES - HOW MANY?" />
+        <FormSelectNum
+          num="10"
+          valueName="numOfChildren"
+          question="IF YOU ANSWERED YES - HOW MANY?"
+        />
 
         <FormSelect question="DO YOU CURRENTLY HAVE ANY TATTOOS?" />
 
-        <FormSelectTextArea id="numOfTattoos" rows="3" question="IF SO,  HOW MANY AND WHERE ARE THEY LOCATED?" questionClass="sub-question" placeholder="Type Here..." />
+        <FormSelectTextArea
+          id="numOfTattoos"
+          rows="3"
+          question="IF SO,  HOW MANY AND WHERE ARE THEY LOCATED?"
+          questionClass="sub-question"
+          placeholder="Type Here..."
+        />
 
         <Button btnClass="form-btn yellow-btn btn-shadow" btnText="Submit" />
       </form>
