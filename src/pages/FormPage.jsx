@@ -9,7 +9,7 @@ export default function FormPage(props) {
   return (
     <div className="form-page">
       <div className="form-page-intro">
-      <h1>Almost There!</h1>
+        <h1>Almost There!</h1>
         <p>
           You’ve taken the first crucial step alone, but rest assured that we
           will take the rest of them together. Let me know a little bit about
@@ -22,23 +22,27 @@ export default function FormPage(props) {
       </div>
       <form>
         <div className="form-question">
-          <p>Full Name</p>
-          <input
-            type="name"
-            class="form-control"
-            id="name"
-            placeholder="Type Here.."
-          />
+          <div className="question-inner">
+            <p>Full Name</p>
+            <input
+              type="name"
+              class="form-control"
+              id="name"
+              placeholder="Type Here.."
+            />
+          </div>
         </div>
 
         <div className="form-question">
-          <p>email</p>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            placeholder="Type Here.."
-          />
+          <div className="question-inner">
+            <p>email</p>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Type Here.."
+            />
+          </div>
         </div>
 
         <FormSelect question="ARE YOU A U.S. CITIZEN OR PERMANENT RESIDENT OF THE U.S.?" />
@@ -47,7 +51,7 @@ export default function FormPage(props) {
 
         <FormSelectTextArea
           id="medicalConcerns"
-          rows="3"
+          rows="4"
           question="IF SO, PLEASE EXPLAIN FURTHER."
           questionClass="sub-question"
           placeholder="Type Here.."
@@ -57,7 +61,7 @@ export default function FormPage(props) {
 
         <FormSelectTextArea
           id="surgery"
-          rows="3"
+          rows="4"
           question="IF SO, PLEASE EXPLAIN FURTHER."
           questionClass="sub-question"
           placeholder="Type Here.."
@@ -70,13 +74,15 @@ export default function FormPage(props) {
         <FormSelect question="HAVE YOU BEEN ARRESTED BEFORE? (REGARDLESS OF OUTCOME)" />
 
         <div className="form-question">
-          <p>WHAT IS YOUR HIGHEST LEVEL OF EDUCATION?</p>
-          <select className="form-select">
-            <option selected>Select</option>
-            <option value="ged">GED</option>
-            <option value="highschool">Highschool</option>
-            <option value="college">College</option>
-          </select>
+          <div className="question-inner">
+            <p>WHAT IS YOUR HIGHEST LEVEL OF EDUCATION?</p>
+            <select className="form-select">
+              <option selected>Select</option>
+              <option value="ged">GED</option>
+              <option value="highschool">Highschool</option>
+              <option value="college">College</option>
+            </select>
+          </div>
         </div>
 
         <FormSelectNum
@@ -86,13 +92,15 @@ export default function FormPage(props) {
         />
 
         <div className="form-question">
-          <p>WHAT IS YOUR CURRENT MARITAL STATUS?</p>
-          <select className="form-select">
-            <option selected>Select</option>
-            <option value="single">Single</option>
-            <option value="married">Married</option>
-            <option value="divorced">Divorced</option>
-          </select>
+          <div className="question-inner">
+            <p>WHAT IS YOUR CURRENT MARITAL STATUS?</p>
+            <select className="form-select">
+              <option selected>Select</option>
+              <option value="single">Single</option>
+              <option value="married">Married</option>
+              <option value="divorced">Divorced</option>
+            </select>
+          </div>
         </div>
 
         <FormSelect question="DO YOU HAVE ANY CHILDREN?" />
@@ -107,7 +115,7 @@ export default function FormPage(props) {
 
         <FormSelectTextArea
           id="numOfTattoos"
-          rows="3"
+          rows="4"
           question="IF SO,  HOW MANY AND WHERE ARE THEY LOCATED?"
           questionClass="sub-question"
           placeholder="Type Here..."

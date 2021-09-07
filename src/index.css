@@ -326,6 +326,9 @@ footer .footer-inner-wrapper .quick-links .quick-link {
 footer .footer-inner-wrapper .national-gaurd-contact-info {
   text-align: center;
 }
+footer .footer-inner-wrapper .social-tablet {
+  display: none;
+}
 footer .footer-inner-wrapper .social-media {
   text-align: center;
   margin-bottom: 10px;
@@ -340,6 +343,32 @@ footer .footer-inner-wrapper .social-media div img {
   height: 15px;
 }
 
+@media (orientation: landscape) {
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 150px;
+  }
+  footer .footer-inner-wrapper {
+    flex-direction: row;
+  }
+  footer .footer-inner-wrapper p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+  }
+  footer .footer-inner-wrapper .social-mobile {
+    display: none;
+  }
+  footer .footer-inner-wrapper .social-tablet {
+    display: block;
+  }
+  footer .footer-inner-wrapper .social-media div img {
+    width: 25px;
+    height: 25px;
+  }
+}
 @media (min-width: 768px) {
   footer {
     display: flex;
@@ -353,6 +382,12 @@ footer .footer-inner-wrapper .social-media div img {
   footer .footer-inner-wrapper p {
     font-size: 1rem;
     line-height: 1.9rem;
+  }
+  footer .footer-inner-wrapper .social-mobile {
+    display: none;
+  }
+  footer .footer-inner-wrapper .social-tablet {
+    display: block;
   }
   footer .footer-inner-wrapper .social-media div img {
     width: 25px;
@@ -1135,21 +1170,59 @@ footer .footer-inner-wrapper .social-media div img {
   font-style: italic;
 }
 .form-page form .form-question .form-select,
-.form-page form .form-question input, .form-page form .form-question textarea {
+.form-page form .form-question input,
+.form-page form .form-question textarea {
   width: 90%;
   margin: 0 auto;
   box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.3);
-}
-.form-page form .form-question input, .form-page form .form-question select, .form-page form .form-question textarea {
   font-weight: bold;
   background-color: #ffd530;
   border: none;
 }
-.form-page form .form-question input::placeholder, .form-page form .form-question textarea::placeholder {
+.form-page form .form-question .form-select::placeholder,
+.form-page form .form-question input::placeholder,
+.form-page form .form-question textarea::placeholder {
   opacity: 0.3;
 }
-.form-page form .form-question input, .form-page form .form-question select {
+.form-page form .form-question input,
+.form-page form .form-question select {
   height: 50px;
+}
+
+@media (min-width: 768px) {
+  .form-page form .form-question {
+    max-width: 1300px;
+    margin: 0 auto 50px auto;
+  }
+  .form-page form .form-question .question-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .form-page form .form-question .question-inner p {
+    text-align: left;
+  }
+  .form-page form .form-question .question-inner .form-select,
+.form-page form .form-question .question-inner input,
+.form-page form .form-question .question-inner textarea {
+    width: 25%;
+    margin: 0;
+  }
+  .form-page form .form-question .question-inner input {
+    width: 60%;
+  }
+  .form-page form .form-question .question-inner .sub-question-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .form-page form .form-question .question-inner .sub-question-wrapper .sub-question {
+    width: 40%;
+  }
+  .form-page form .form-question .question-inner .sub-question-wrapper textarea {
+    width: 40%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,5 +1,5 @@
 .form-page {
-    text-align: center;
+  text-align: center;
   width: 100vw;
   min-height: 100vh;
   background-color: $gray;
@@ -11,14 +11,14 @@
     background-color: $yellow;
 
     p {
-        text-align: justify;
-        max-width: 816px;
-        margin: 0 auto 15px auto;
-        font-size: 16px;
-        color: $black;
-        font-weight: bold;
+      text-align: justify;
+      max-width: 816px;
+      margin: 0 auto 15px auto;
+      font-size: 16px;
+      color: $black;
+      font-weight: bold;
     }
-}
+  }
 
   form {
     height: 100%;
@@ -37,30 +37,72 @@
       }
 
       .sub-question {
-          font-style: italic;
+        font-style: italic;
       }
 
       .form-select,
-      input, textarea {
+      input,
+      textarea {
         width: 90%;
         margin: 0 auto;
         box-shadow: 7px 7px 12px rgba($color: #000000, $alpha: 0.3);
-      }
-
-      input, select, textarea {
         font-weight: bold;
         background-color: $yellow;
         border: none;
-      }
 
-      input, textarea {
         &::placeholder {
-            opacity: 0.3;
+          opacity: 0.3;
         }
       }
 
-      input, select {
-          height: 50px;
+      input,
+      select {
+        height: 50px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .form-page {
+    form {
+      .form-question {
+        max-width: 1300px;
+        margin: 0 auto 50px auto;
+        .question-inner {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+
+          p {
+            text-align: left;
+          }
+
+          .form-select,
+          input,
+          textarea {
+            width: 25%;
+            margin: 0;
+          }
+
+          input {
+            width: 60%;
+          }
+
+          .sub-question-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            width: 100%;
+            .sub-question {
+              width: 40%;
+            }
+
+            textarea {
+              width: 40%;
+            }
+          }
+        }
       }
     }
   }

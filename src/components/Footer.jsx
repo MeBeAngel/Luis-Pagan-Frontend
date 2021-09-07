@@ -27,7 +27,7 @@ export default function Footer(props) {
           <p>Request Info</p>
         </Link>
       </div>
-      <div className={isTablet ? "social-media bold hide" : "social-media bold"}>
+      <div className="social-media bold social-mobile">
         <p>CONNECT WITH ME</p>
         <div>
         <a href="https://www.facebook.com/">
@@ -47,7 +47,7 @@ export default function Footer(props) {
         <p>montalvo.l.pagan.mil@mail.mil</p>
         <p>(347) 865-8226</p>
       </div>
-      <div className={isMobile ? "social-media bold hide" : "social-media bold"}>
+      <div className="social-media bold social-tablet">
         <p>CONNECT WITH ME</p>
         <div>
         <a href="https://www.facebook.com/">

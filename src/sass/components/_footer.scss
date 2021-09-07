@@ -26,6 +26,10 @@ footer {
       text-align: center;
     }
 
+    .social-tablet {
+      display: none;
+    }
+
     .social-media {
       text-align: center;
       margin-bottom: 10px;
@@ -44,6 +48,39 @@ footer {
   }
 }
 
+@media (orientation: landscape) {
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 150px;
+    .footer-inner-wrapper {
+      flex-direction: row;
+      p {
+        font-size: 1rem;
+        line-height: 1.9rem;
+      }
+
+      .social-mobile {
+        display: none;
+      }
+      .social-tablet {
+        display: block;
+      }
+
+      .social-media {
+        div {
+          img {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 768px) {
   footer {
     display: flex;
@@ -55,6 +92,13 @@ footer {
       p {
         font-size: 1rem;
         line-height: 1.9rem;
+      }
+
+      .social-mobile {
+        display: none;
+      }
+      .social-tablet {
+        display: block;
       }
 
       .social-media {
