@@ -89,6 +89,9 @@
             height: 20px;
             margin: 0 10px 0 5px;
           }
+          .date-block {
+            margin-left:10px;
+          }
         }
 
         .name {
@@ -120,6 +123,21 @@
   background-image: url("./images/testimony-bg-gray.svg");
 }
 
+
+@media(min-width:768px) {
+  .testimonial-wrapper {
+    .testimonial {
+      .testimonial__info {
+        .info-block {
+          .quote {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 1000px) {
   .testimonial-wrapper {
     padding: 45px 15px;
@@ -139,6 +157,7 @@
         width: 45%;
 
         .info-block {
+          p {font-size: 20px;}
           .quote {
             text-align: left;
           }
@@ -159,6 +178,8 @@
       }
     }
   }
+
+
 
   .black-texture-bg {
     padding-top: 50px;

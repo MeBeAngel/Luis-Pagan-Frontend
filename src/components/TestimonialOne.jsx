@@ -93,7 +93,7 @@ export default function TestimonialOne(props) {
             </p>
             <p className="date">
               <span className="date__inner-text">
-                date <span className="background-black block"></span>9/02/21
+                date <span className="background-black block date-block"></span>9/02/21
               </span>
             </p>
           </div>
@@ -110,7 +110,7 @@ export default function TestimonialOne(props) {
             </p>
             <p className="date">
               <span className="date__inner-text">
-                date <span className="background-gray block"></span>9/02/21
+                date <span className="background-gray block date-block"></span>9/02/21
               </span>
             </p>
           </div>

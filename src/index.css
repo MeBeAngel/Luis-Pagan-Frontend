@@ -347,6 +347,9 @@ footer .footer-inner-wrapper .social-media div img {
     align-items: center;
     height: 150px;
   }
+  footer .footer-inner-wrapper {
+    flex-direction: row;
+  }
   footer .footer-inner-wrapper p {
     font-size: 1rem;
     line-height: 1.9rem;
@@ -446,6 +449,10 @@ footer .footer-inner-wrapper .social-media div img {
   height: 20px;
   margin: 0 10px 0 5px;
 }
+.testimonial-wrapper .testimonial .testimonial__info .info-block .name .date-block,
+.testimonial-wrapper .testimonial .testimonial__info .info-block .date .date-block {
+  margin-left: 10px;
+}
 .testimonial-wrapper .testimonial .testimonial__info .info-block .name {
   margin-bottom: 10px;
 }
@@ -470,6 +477,11 @@ footer .footer-inner-wrapper .social-media div img {
   background-image: url("./images/testimony-bg-gray.svg");
 }
 
+@media (min-width: 768px) {
+  .testimonial-wrapper .testimonial .testimonial__info .info-block .quote {
+    font-size: 20px;
+  }
+}
 @media (min-width: 1000px) {
   .testimonial-wrapper {
     padding: 45px 15px;
@@ -486,6 +498,9 @@ footer .footer-inner-wrapper .social-media div img {
   }
   .testimonial-wrapper .testimonial .testimonial__info {
     width: 45%;
+  }
+  .testimonial-wrapper .testimonial .testimonial__info .info-block p {
+    font-size: 20px;
   }
   .testimonial-wrapper .testimonial .testimonial__info .info-block .quote {
     text-align: left;

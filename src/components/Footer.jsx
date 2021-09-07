@@ -1,4 +1,5 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 
 // Social Icons
@@ -7,6 +8,10 @@ import InstagramYellow from "../images/instagram_yellow.svg";
 import LinkedinYellow from "../images/linkedin_yellow.svg";
 
 export default function Footer(props) {
+
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
+
   return (
     <footer>
       <div className="footer-inner-wrapper">
@@ -22,7 +27,7 @@ export default function Footer(props) {
           <p>Request Info</p>
         </Link>
       </div>
-      <div className="social-media bold">
+      <div className={isTablet ? "social-media bold hide" : "social-media bold"}>
         <p>CONNECT WITH ME</p>
         <div>
         <a href="https://www.facebook.com/">
@@ -42,7 +47,7 @@ export default function Footer(props) {
         <p>montalvo.l.pagan.mil@mail.mil</p>
         <p>(347) 865-8226</p>
       </div>
-      <div className="social-media bold hide">
+      <div className={isMobile ? "social-media bold hide" : "social-media bold"}>
         <p>CONNECT WITH ME</p>
         <div>
         <a href="https://www.facebook.com/">
