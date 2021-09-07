@@ -68,8 +68,11 @@
 
     .testimonial__info {
       .info-block {
+        position: relative;
         .quote {
           text-align: center;
+          font-weight: bold;
+          font-style: italic;
           margin-bottom: 20px;
         }
         .name,
@@ -77,10 +80,10 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          //padding-left: 20%;
           font-weight: bold;
           text-transform: uppercase;
-          span {
+          width: 100%;
+          .block {
             display: inline-block;
             width: 10px;
             height: 20px;
@@ -90,6 +93,11 @@
 
         .name {
           margin-bottom: 10px;
+        }
+
+        .name__inner-text, .date__inner-text {
+          display: flex;
+          align-items: center;
         }
       }
     }
@@ -134,13 +142,18 @@
           .quote {
             text-align: left;
           }
-          .name,
-          .date {
-            padding-left: 0;
-          }
+          .name-date-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
 
-          .name {
-            margin-bottom: 10px;
+            .name,
+            .date {
+              padding-left: 0;
+            }
+
+            .name {
+              margin-bottom: 10px;
+            }
           }
         }
       }
@@ -154,7 +167,7 @@
     background-repeat: no-repeat;
     background-image: url("./images/testimony-bg-black.svg");
   }
-  
+
   .gray-texture-bg {
     padding-bottom: 50px;
     background-size: cover;

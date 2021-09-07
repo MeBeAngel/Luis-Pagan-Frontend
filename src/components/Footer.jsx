@@ -25,8 +25,8 @@ export default function Footer(props) {
       <div className="national-gaurd-contact-info bold">
         <p>New York Army National Guard Recruiting & Retention</p>
         <p>955 Washington Ave, Peekskill, NY 10566</p>
-        <p>(347) 865-8226</p>
         <p>montalvo.l.pagan.mil@mail.mil</p>
+        <p>(347) 865-8226</p>
       </div>
       <div className="social-media bold">
         <p>CONNECT WITH ME</p>

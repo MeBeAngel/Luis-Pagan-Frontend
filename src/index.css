@@ -323,7 +323,7 @@ footer .footer-inner-wrapper .quick-links .quick-link {
   color: #bfb8ab;
 }
 footer .footer-inner-wrapper .national-gaurd-contact-info {
-  text-align: left;
+  text-align: center;
 }
 footer .footer-inner-wrapper .social-media {
   text-align: center;
@@ -419,8 +419,13 @@ footer .footer-inner-wrapper .social-media div img {
 .testimonial-wrapper .testimonial .testimonial__video .reset-icon img {
   width: 90px;
 }
+.testimonial-wrapper .testimonial .testimonial__info .info-block {
+  position: relative;
+}
 .testimonial-wrapper .testimonial .testimonial__info .info-block .quote {
   text-align: center;
+  font-weight: bold;
+  font-style: italic;
   margin-bottom: 20px;
 }
 .testimonial-wrapper .testimonial .testimonial__info .info-block .name,
@@ -430,9 +435,10 @@ footer .footer-inner-wrapper .social-media div img {
   align-items: center;
   font-weight: bold;
   text-transform: uppercase;
+  width: 100%;
 }
-.testimonial-wrapper .testimonial .testimonial__info .info-block .name span,
-.testimonial-wrapper .testimonial .testimonial__info .info-block .date span {
+.testimonial-wrapper .testimonial .testimonial__info .info-block .name .block,
+.testimonial-wrapper .testimonial .testimonial__info .info-block .date .block {
   display: inline-block;
   width: 10px;
   height: 20px;
@@ -440,6 +446,10 @@ footer .footer-inner-wrapper .social-media div img {
 }
 .testimonial-wrapper .testimonial .testimonial__info .info-block .name {
   margin-bottom: 10px;
+}
+.testimonial-wrapper .testimonial .testimonial__info .info-block .name__inner-text, .testimonial-wrapper .testimonial .testimonial__info .info-block .date__inner-text {
+  display: flex;
+  align-items: center;
 }
 
 .black-texture-bg {
@@ -478,11 +488,15 @@ footer .footer-inner-wrapper .social-media div img {
   .testimonial-wrapper .testimonial .testimonial__info .info-block .quote {
     text-align: left;
   }
-  .testimonial-wrapper .testimonial .testimonial__info .info-block .name,
-.testimonial-wrapper .testimonial .testimonial__info .info-block .date {
+  .testimonial-wrapper .testimonial .testimonial__info .info-block .name-date-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .testimonial-wrapper .testimonial .testimonial__info .info-block .name-date-grid .name,
+.testimonial-wrapper .testimonial .testimonial__info .info-block .name-date-grid .date {
     padding-left: 0;
   }
-  .testimonial-wrapper .testimonial .testimonial__info .info-block .name {
+  .testimonial-wrapper .testimonial .testimonial__info .info-block .name-date-grid .name {
     margin-bottom: 10px;
   }
 

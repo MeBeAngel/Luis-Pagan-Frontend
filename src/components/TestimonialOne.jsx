@@ -1,7 +1,7 @@
 import { React, useEffect } from "react";
 import PlayIcon from "../images/play.svg";
 import PauseIcon from "../images/pause.svg";
-import ResetIcon from "../images/reset.svg";  
+import ResetIcon from "../images/reset.svg";
 
 export default function TestimonialOne(props) {
   useEffect(() => {
@@ -40,13 +40,32 @@ export default function TestimonialOne(props) {
     e.target.parentNode.parentNode.children[0].play();
   }
 
+  ////////// Centering logic for "name" and "date" elements //////////
+  useEffect(() => {
+    let name = document.getElementsByClassName("name__inner-text");
+    let date = document.getElementsByClassName("date__inner-text");
+    let array = [];
+    let array2 = [];
+
+    for (var i = 0; i < name.length; i++) {
+      array.push(name[i]);
+    }
+    for (var i = 0; i < date.length; i++) {
+      array2.push(date[i]);
+    }
+
+    array2[0].style.width = array[0].getBoundingClientRect().width + "px";
+    array2[3].style.width = array[3].getBoundingClientRect().width + "px";
+  }, []);
+  ///////////////////////////////////////////////////////////////////
+
   return (
     <div className={`testimonial-wrapper ${props.class}`}>
       {/* <h1>{props.title}</h1> */}
       <div className="testimonial">
         <div className={`testimonial__video ${props.leftVideo}`}>
           <video
-            class="video"
+            className="video"
             width="100%"
             height="100%"
             muted="muted"
@@ -64,15 +83,18 @@ export default function TestimonialOne(props) {
           <div className={`info-block ${props.bioLeftClass}`}>
             <p className="quote">
               "WITTY QUOTE FROM THE TESTIMONY THAT SHOULD GARNER FURTHER
-              ATTENTION TO ACTUALLY WATCH THE VIDEO. HOPEFULLY THIS WOULD KEEP
-              VIEWERS ON THE SITE FOR LONGER AND INSPIRE THEM TO REQUEST MORE
-              INFO."
+              ATTENTION TO ACTUALLY WATCH THE VIDEO."
             </p>
             <p className="name">
-              name <span className="background-black"></span> Angel Gonzalez
+              <span className="name__inner-text">
+                name <span className="background-black block"></span> Angel
+                Gonzalez
+              </span>
             </p>
             <p className="date">
-              date <span className="background-black"></span>9/02/21
+              <span className="date__inner-text">
+                date <span className="background-black block"></span>9/02/21
+              </span>
             </p>
           </div>
           <div className={`info-block ${props.bioRightClass}`}>
@@ -81,16 +103,21 @@ export default function TestimonialOne(props) {
               ATTENTION."
             </p>
             <p className="name">
-              name <span className="background-gray"></span> Angel Gonzalez
+              <span className="name__inner-text">
+                name <span className="background-gray block"></span> Angel
+                Gonzalez
+              </span>
             </p>
             <p className="date">
-              date <span className="background-gray"></span>9/02/21
+              <span className="date__inner-text">
+                date <span className="background-gray block"></span>9/02/21
+              </span>
             </p>
           </div>
         </div>
         <div className={`testimonial__video ${props.rightVideo}`}>
           <video
-            class="video"
+            className="video"
             width="100%"
             height="100%"
             muted="muted"
