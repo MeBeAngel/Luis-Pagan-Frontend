@@ -308,6 +308,7 @@ footer .footer-inner-wrapper {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-direction: column;
   width: 100%;
   padding: 10px 0;
 }
@@ -327,6 +328,7 @@ footer .footer-inner-wrapper .national-gaurd-contact-info {
 }
 footer .footer-inner-wrapper .social-media {
   text-align: center;
+  margin-bottom: 10px;
 }
 footer .footer-inner-wrapper .social-media div {
   display: flex;

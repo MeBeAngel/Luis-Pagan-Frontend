@@ -22,13 +22,27 @@ export default function Footer(props) {
           <p>Request Info</p>
         </Link>
       </div>
+      <div className="social-media bold">
+        <p>CONNECT WITH ME</p>
+        <div>
+        <a href="https://www.facebook.com/">
+              <img src={FacebookYellow} alt="" />
+            </a>
+            <a href="https://www.instagram.com/">
+              <img src={InstagramYellow} alt="" />
+            </a>
+            <a href="https://www.linkedin.com/">
+              <img src={LinkedinYellow} alt="" />
+            </a>
+        </div>
+      </div>
       <div className="national-gaurd-contact-info bold">
         <p>New York Army National Guard Recruiting & Retention</p>
         <p>955 Washington Ave, Peekskill, NY 10566</p>
         <p>montalvo.l.pagan.mil@mail.mil</p>
         <p>(347) 865-8226</p>
       </div>
-      <div className="social-media bold">
+      <div className="social-media bold hide">
         <p>CONNECT WITH ME</p>
         <div>
         <a href="https://www.facebook.com/">
