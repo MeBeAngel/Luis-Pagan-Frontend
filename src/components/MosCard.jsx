@@ -6,6 +6,15 @@ export default function MosCard(props) {
     <div className="mos-card-wrapper">
       <h2 className="card-title">{props.mosTitle}</h2>
       <div className="mos-card">
+        <div className="mos-video-wrapper">
+          <video
+            id="mos-video"
+            className="mos-video"
+            muted="muted"
+            src="https://luis-pagan.nyc3.digitaloceanspaces.com/mos-combat-engineer.mp4"
+            onClick={props.videoOnClick}
+          ></video>
+        </div>
         <div className="flip-card">
           <div className="flip-card-inner">
             <div
@@ -21,14 +30,6 @@ export default function MosCard(props) {
                 btnText="Watch Video"
                 onClick={props.btnOnClick}
               />
-              <div className="mos-video-wrapper">
-                <video
-                  id="mos-video"
-                  //muted="muted"
-                  src="https://luis-pagan.nyc3.digitaloceanspaces.com/mos-combat-engineer.mp4"
-                  onClick={props.videoOnClick}
-                ></video>
-              </div>
             </div>
           </div>
         </div>

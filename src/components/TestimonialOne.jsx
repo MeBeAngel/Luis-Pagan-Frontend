@@ -1,9 +1,10 @@
-import { React, useEffect } from "react";
+import { React, useState, useEffect } from "react";
 import PlayIcon from "../images/play.svg";
 import PauseIcon from "../images/pause.svg";
 import ResetIcon from "../images/reset.svg";
 
 export default function TestimonialOne(props) {
+
   useEffect(() => {
     const video = document.getElementsByClassName("video");
 
@@ -41,6 +42,7 @@ export default function TestimonialOne(props) {
   }
 
   ////////// Centering logic for "name" and "date" elements //////////
+
   useEffect(() => {
     let name = document.getElementsByClassName("name__inner-text");
     let date = document.getElementsByClassName("date__inner-text");
@@ -50,12 +52,14 @@ export default function TestimonialOne(props) {
     for (var i = 0; i < name.length; i++) {
       array.push(name[i]);
     }
+
     for (var i = 0; i < date.length; i++) {
       array2.push(date[i]);
     }
 
     array2[0].style.width = array[0].getBoundingClientRect().width + "px";
     array2[3].style.width = array[3].getBoundingClientRect().width + "px";
+
   }, []);
   ///////////////////////////////////////////////////////////////////
 

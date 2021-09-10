@@ -33,6 +33,21 @@
     border-radius: 10%;
     box-shadow: rgba(0, 0, 0, 1) 15px 25px 20px -20px;
 
+    .mos-video-wrapper {
+      display: none;
+      position: absolute;
+      top: 37px;
+      left: 37px;
+      width: 292px;
+      height: 293px;
+      background-color: $yellow;
+      z-index: 1;
+
+      video {
+        height: 100%;
+      }
+    }
+
     /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
     .flip-card {
       position: absolute;
@@ -100,20 +115,6 @@
           text-align: justify;
           font-size: 14px;
           color: $yellow;
-        }
-
-        .mos-video-wrapper {
-          display: none;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: $yellow;
-
-          video {
-            height: 100%;
-          }
         }
       }
     }
