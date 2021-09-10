@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import TestimonialOne from "../components/TestimonialOne";
 import Benefits from "../components/Benefits";
@@ -15,55 +16,15 @@ export default function HomePage() {
 
   /////////////////////////////////////
 
-
-
-  ///////// Popup video logic //////////
-
-  var htmlElement = document.querySelector("html");
-
-  // Opens popup video overlay, scrolls to top of page and plays video
-  function openOverlay() {
-    const popupVideo = document.querySelector("#popup-video");
-    document.querySelector(".popup-video-wrapper").style.display = "block";
-    htmlElement.style.overflowY = "hidden";
-    window.scrollTo(0, 0);
-    popupVideo.play();
-  }
-
-  // Closes popup video overlay, pauses video and resets video current time back to 0
-  function closeOverlay() {
-    const popupVideo = document.querySelector("#popup-video");
-    document.querySelector(".popup-video-wrapper").style.display = "none";
-    htmlElement.style.overflowY = "visible";
-    popupVideo.pause();
-    popupVideo.currentTime = 0;
-  }
-
-  /////////////////////////////////////
-
   return (
     <div className="home-page-wrapper">
-      <div className="popup-video-wrapper">
-        <div className="popup-video-inner-wrapper">
-          <i className="fas fa-times" onClick={closeOverlay}></i>
-          <video
-            id="popup-video"
-            controls="controls"
-            muted="muted"
-            src="https://luis-pagan.nyc3.digitaloceanspaces.com/NG-main.mp4"
-          ></video>
-        </div>
-      </div>
-
       <section className="home-page-jumbotron">
         <div className="jumbotron-overlay">
           <div>
             <h1>Find the Perfect JOB for you.</h1>
-            <Button
-              btnClass="jumbotron-btn yellow-btn"
-              btnText="WATCH NOW"
-              onClick={openOverlay}
-            />
+            <Link to="/mos">
+              <Button btnClass="jumbotron-btn yellow-btn" btnText="MORE INFO" />
+            </Link>
           </div>
         </div>
         <video

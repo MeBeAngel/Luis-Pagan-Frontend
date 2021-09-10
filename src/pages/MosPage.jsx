@@ -9,10 +9,12 @@ export default function MosPage() {
   useEffect(() => {
     const video = document.getElementsByClassName("mos-video");
     const videoWrapper = document.querySelector(".mos-video-wrapper");
+    const flipCardInner = document.querySelector(".flip-card-inner");
 
     for (var i = 0; i < video.length; i++) {
       video[i].onended = (e) => {
         videoWrapper.style.display = "none";
+        flipCardInner.style.visibility = "visible";
       };
     }
   }, []);
