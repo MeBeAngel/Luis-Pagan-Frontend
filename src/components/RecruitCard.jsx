@@ -7,11 +7,11 @@ export default function RecruitCard(props) {
       <div className="recruit-item__img">
         <img src={props.recruitImage} alt={props.alt} />
       </div>
-      <p className="recruit-name">ANGEL GONZALEZ</p>
-      <p className="recruit-enlistment">02/11/1989</p>
-      <p className="recruit-rank">PRIVATE</p>
-      <p className="recruit-mos"><span></span>(131A) Air Defense Command, Control, Communications, Computers Maintainer</p>
-      <p className="fun-fact">I like to blow stuff up.</p>
+      <p className="recruit-name">{props.recruitName}</p>
+      <p className="recruit-enlistment">{props.doe}</p>
+      <p className="recruit-rank">{props.rank}</p>
+      <p className="recruit-mos"><span></span>{props.mos}</p>
+      <p className="fun-fact">{props.funFact}</p>
     </div>
   );
 }

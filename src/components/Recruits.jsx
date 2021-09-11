@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -42,6 +42,23 @@ export default function Recruits(props) {
     };
   }
 
+  ////////// State for recruit cards //////////
+  const [recruitCards, setRecruitCards] = useState([]);
+
+  ////////// Strapi API call for Recruit Cards //////////
+  useEffect(() => {
+    fetch('http://localhost:4000/recruit-cards', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => response.json())
+      .then(data => setRecruitCards(data));
+    
+  }, []);
+
+  
   return (
     <div className="background-yellow recruit-wrapper">
       <h1> MEET THE RECRUITS</h1>
@@ -52,59 +69,23 @@ export default function Recruits(props) {
         wanting to join the greatest force in New York. Find out a little about
         them below.
       </p>
-      <Slider className="slider" {...settings}>
-        <RecruitCard
-          recruitImage={TestImage}
-          recruitName="Angel Gonzalez"
-          doe="12/11/20"
-          rank="Captian"
-          mos="Toilet bowl cleaner (F12)"
-          funFact="Fun Fact text goes here"
-        />
-        <RecruitCard
-          recruitImage={Image}
-          recruitName="Angel Gonzalez"
-          doe="12/11/20"
-          rank="Captian"
-          mos="Toilet bowl cleaner (F12)"
-          funFact="Fun Fact text goes here"
-        />
 
-        <RecruitCard
-          recruitImage={Image}
-          recruitName="Angel Gonzalez"
-          doe="12/11/20"
-          rank="Captian"
-          mos="Toilet bowl cleaner (F12)"
-          funFact="Fun Fact text goes here"
-        />
-        <RecruitCard
-          recruitImage={Image}
-          recruitName="Angel Gonzalez"
-          doe="12/11/20"
-          rank="Captian"
-          mos="Toilet bowl cleaner (F12)"
-          funFact="Fun Fact text goes here"
-        />
-        <RecruitCard
-          recruitImage={Image}
-          recruitName="Angel Gonzalez"
-          doe="12/11/20"
-          rank="Captian"
-          mos="Toilet bowl cleaner (F12)"
-          funFact="Fun Fact text goes here"
-        />
-        <RecruitCard
-          recruitImage={Image}
-          recruitName="Angel Gonzalez"
-          doe="12/11/20"
-          rank="Captian"
-          mos="Toilet bowl cleaner (F12)"
-          funFact="Fun Fact text goes here"
-        />
+      <Slider className="slider" {...settings}>
+
+        {recruitCards.map((recruit) => {
+          return <RecruitCard
+              key={recruit.id}
+              recruitImage={`http://localhost:4000${recruit.image.url}`}
+              recruitName={recruit.name}
+              doe={recruit.enlistment}
+              rank={recruit.rank}
+              mos={recruit.mos}
+              funFact={recruit.fact}
+            />
+        })}
+
+        
       </Slider>
     </div>
   );
 }
-
-//  (Name, Date of enlistment and rank, MOS (Job), Fun Fact)

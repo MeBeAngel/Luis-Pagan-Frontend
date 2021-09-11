@@ -736,8 +736,9 @@ footer .footer-inner-wrapper .social-media div img {
   width: 100%;
   z-index: 1;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: bold;
   padding-right: 8px;
+  text-transform: uppercase;
 }
 .recruit-wrapper .recruit-item .recruit-name {
   bottom: 200px;
@@ -827,7 +828,7 @@ footer .footer-inner-wrapper .social-media div img {
   top: 37px;
   left: 37px;
   background-color: #121212;
-  width: 292px;
+  width: 293px;
   height: 293px;
   perspective: 1000px;
   /* Remove this if you don't want the 3D effect */
@@ -1058,7 +1059,6 @@ footer .footer-inner-wrapper .social-media div img {
 }
 .mos-page {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
@@ -1102,6 +1102,13 @@ footer .footer-inner-wrapper .social-media div img {
 @media (min-width: 1250px) {
   .mos-page .mos-wrapper {
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px 50px;
+    padding: 50px 0;
+  }
+}
+@media (min-width: 1750px) {
+  .mos-page .mos-wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 50px 50px;
     padding: 50px 0;
   }

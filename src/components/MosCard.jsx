@@ -11,7 +11,7 @@ export default function MosCard(props) {
             id="mos-video"
             className="mos-video"
             muted="muted"
-            src="https://luis-pagan.nyc3.digitaloceanspaces.com/mos-combat-engineer.mp4"
+            src={props.videoUrl}
             onClick={props.videoOnClick}
           ></video>
         </div>

@@ -62,6 +62,25 @@ export default function MosPage() {
   }
   ////////////////////////////////////////////////////////////////////////////////////////
 
+
+
+    ////////// State for MOS cards //////////
+    const [mosCards, setMosCards] = useState([]);
+
+    ////////// Strapi API call for MOS Cards //////////
+    useEffect(() => {
+      fetch('http://localhost:4000/mos-cards', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+        .then(response => response.json())
+        .then(data => setMosCards(data));
+      
+    }, []);
+    /////////////////////////////////////////////////
+
   return (
     <div className="mos-page" onClick={closeOverlay}>
       <div className="mos-page__intro">
@@ -83,132 +102,20 @@ export default function MosPage() {
         </Link>
       </div>
       <div className="mos-wrapper">
-        <MosCard
-          mosTitle="Combat Engineer"
-          mosNumber="12B"
-          mosDescription="This is a rough-and-tumble, hands-on job. You get all the
-              excitement of the field, and need to problem solve on the spot —
-              oftentimes in high-stress situations. 12Bs construct fighting
-              positions, help the team navigate rough terrain, place and
-              detonate explosives, detect mines, and a lot more."
-          mosImg={Test}
-          btnOnClick={openOverlay}
-          videoOnClick={closeOverlay}
-        />
-        <MosCard
-          mosTitle="Combat Engineer"
-          mosNumber="12B"
-          mosDescription="This is a rough-and-tumble, hands-on job. You get all the
-              excitement of the field, and need to problem solve on the spot —
-              oftentimes in high-stress situations. 12Bs construct fighting
-              positions, help the team navigate rough terrain, place and
-              detonate explosives, detect mines, and a lot more."
-          mosImg={Test}
-          btnOnClick={openOverlay}
-          videoOnClick={closeOverlay}
-        />
-        <MosCard
-          mosTitle="Combat Engineer"
-          mosNumber="12B"
-          mosDescription="This is a rough-and-tumble, hands-on job. You get all the
-              excitement of the field, and need to problem solve on the spot —
-              oftentimes in high-stress situations. 12Bs construct fighting
-              positions, help the team navigate rough terrain, place and
-              detonate explosives, detect mines, and a lot more."
-          mosImg={Test}
-          btnOnClick={openOverlay}
-          videoOnClick={closeOverlay}
-        />
-        <MosCard
-          mosTitle="Combat Engineer"
-          mosNumber="12B"
-          mosDescription="This is a rough-and-tumble, hands-on job. You get all the
-              excitement of the field, and need to problem solve on the spot —
-              oftentimes in high-stress situations. 12Bs construct fighting
-              positions, help the team navigate rough terrain, place and
-              detonate explosives, detect mines, and a lot more."
-          mosImg={Test}
-          btnOnClick={openOverlay}
-          videoOnClick={closeOverlay}
-        />
+        
 
-        <MosCard
-          mosTitle="Combat Engineer"
-          mosNumber="12B"
-          mosDescription="This is a rough-and-tumble, hands-on job. You get all the
-              excitement of the field, and need to problem solve on the spot —
-              oftentimes in high-stress situations. 12Bs construct fighting
-              positions, help the team navigate rough terrain, place and
-              detonate explosives, detect mines, and a lot more."
-          mosImg={Test}
+        {mosCards.map((card) => {
+          return <MosCard
+          key={card.id}
+          mosTitle={card.title}
+          mosNumber={card.number}
+          mosDescription={card.description}
+          mosImg={`http://localhost:4000${card.image.url}`}
+          videoUrl={card.video_url}
           btnOnClick={openOverlay}
           videoOnClick={closeOverlay}
         />
-
-        <MosCard
-          mosTitle="Combat Engineer"
-          mosNumber="12B"
-          mosDescription="This is a rough-and-tumble, hands-on job. You get all the
-              excitement of the field, and need to problem solve on the spot —
-              oftentimes in high-stress situations. 12Bs construct fighting
-              positions, help the team navigate rough terrain, place and
-              detonate explosives, detect mines, and a lot more."
-          mosImg={Test}
-          btnOnClick={openOverlay}
-          videoOnClick={closeOverlay}
-        />
-
-        <MosCard
-          mosTitle="Combat Engineer"
-          mosNumber="12B"
-          mosDescription="This is a rough-and-tumble, hands-on job. You get all the
-              excitement of the field, and need to problem solve on the spot —
-              oftentimes in high-stress situations. 12Bs construct fighting
-              positions, help the team navigate rough terrain, place and
-              detonate explosives, detect mines, and a lot more."
-          mosImg={Test}
-          btnOnClick={openOverlay}
-          videoOnClick={closeOverlay}
-        />
-
-        <MosCard
-          mosTitle="Combat Engineer"
-          mosNumber="12B"
-          mosDescription="This is a rough-and-tumble, hands-on job. You get all the
-              excitement of the field, and need to problem solve on the spot —
-              oftentimes in high-stress situations. 12Bs construct fighting
-              positions, help the team navigate rough terrain, place and
-              detonate explosives, detect mines, and a lot more."
-          mosImg={Test}
-          btnOnClick={openOverlay}
-          videoOnClick={closeOverlay}
-        />
-
-        <MosCard
-          mosTitle="Combat Engineer"
-          mosNumber="12B"
-          mosDescription="This is a rough-and-tumble, hands-on job. You get all the
-              excitement of the field, and need to problem solve on the spot —
-              oftentimes in high-stress situations. 12Bs construct fighting
-              positions, help the team navigate rough terrain, place and
-              detonate explosives, detect mines, and a lot more."
-          mosImg={Test}
-          btnOnClick={openOverlay}
-          videoOnClick={closeOverlay}
-        />
-
-        <MosCard
-          mosTitle="Combat Engineer"
-          mosNumber="12B"
-          mosDescription="This is a rough-and-tumble, hands-on job. You get all the
-              excitement of the field, and need to problem solve on the spot —
-              oftentimes in high-stress situations. 12Bs construct fighting
-              positions, help the team navigate rough terrain, place and
-              detonate explosives, detect mines, and a lot more."
-          mosImg={Test}
-          btnOnClick={openOverlay}
-          videoOnClick={closeOverlay}
-        />
+        })}
       </div>
     </div>
   );
