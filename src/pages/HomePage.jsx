@@ -9,8 +9,8 @@ import Button from "../components/Button";
 export default function HomePage() {
   ////////// Media Query Vars //////////
 
-  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
-  const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
+  // const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  // const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
   const isMobileOrTablet = useMediaQuery({ query: "(max-width: 999px)" });
   const biggerScreens = useMediaQuery({ query: "(min-width: 1000px)" });
 
@@ -28,7 +28,7 @@ export default function HomePage() {
           </div>
         </div>
         <video
-          autoplay="autoplay"
+          autoPlay="autoplay"
           muted="muted"
           loop="loop"
           src="https://luis-pagan.nyc3.digitaloceanspaces.com/NG-main.mp4"

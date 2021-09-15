@@ -1,5 +1,4 @@
 import React from "react";
-import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 
 // Social Icons
@@ -8,9 +7,6 @@ import InstagramYellow from "../images/instagram_yellow.svg";
 import LinkedinYellow from "../images/linkedin_yellow.svg";
 
 export default function Footer(props) {
-
-  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
-  const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
 
   return (
     <footer>

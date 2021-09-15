@@ -5,6 +5,35 @@ import ResetIcon from "../images/reset.svg";
 
 export default function TestimonialOne(props) {
 
+
+  ////////// Testimony API Call and state //////////
+  const [testimonyOne, setTestimonyOne] = useState([]);
+  const [testimonyTwo, setTestimonyTwo] = useState([]);
+
+  useEffect(() => {
+    fetch("https://luis-pagan-hyh5u.ondigitalocean.app/testimony-1", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => setTestimonyOne(data));
+
+    fetch("https://luis-pagan-hyh5u.ondigitalocean.app/testimony-2", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => setTestimonyTwo(data));
+  }, []);
+  /////////////////////////////////////////////
+
+  console.log(testimonyOne)
+  
+
   useEffect(() => {
     const video = document.getElementsByClassName("video");
 
@@ -41,27 +70,7 @@ export default function TestimonialOne(props) {
     e.target.parentNode.parentNode.children[0].play();
   }
 
-  ////////// Centering logic for "name" and "date" elements //////////
-
-  useEffect(() => {
-    let name = document.getElementsByClassName("name__inner-text");
-    let date = document.getElementsByClassName("date__inner-text");
-    let array = [];
-    let array2 = [];
-
-    for (var i = 0; i < name.length; i++) {
-      array.push(name[i]);
-    }
-
-    for (var i = 0; i < date.length; i++) {
-      array2.push(date[i]);
-    }
-
-    array2[0].style.width = array[0].getBoundingClientRect().width + "px";
-    array2[3].style.width = array[3].getBoundingClientRect().width + "px";
-
-  }, []);
-  ///////////////////////////////////////////////////////////////////
+ 
 
   return (
     <div className={`testimonial-wrapper ${props.class}`}>
@@ -73,7 +82,7 @@ export default function TestimonialOne(props) {
             width="100%"
             height="100%"
             muted="muted"
-            src="https://luis-pagan.nyc3.digitaloceanspaces.com/testimony-placeholder2.mp4"
+            src={testimonyOne.video_url}
           ></video>
           <div className="play-icon">
             <img src={PlayIcon} alt="" onClick={play} />
@@ -85,36 +94,32 @@ export default function TestimonialOne(props) {
         </div>
         <div className="testimonial__info gray bold">
           <div className={`info-block ${props.bioLeftClass}`}>
-            <p className="quote">
-              "WITTY QUOTE FROM THE TESTIMONY THAT SHOULD GARNER FURTHER
-              ATTENTION TO ACTUALLY WATCH THE VIDEO."
-            </p>
+            <p className="quote">{`"${testimonyOne.quote}"`}</p>
             <p className="name">
               <span className="name__inner-text">
-                name <span className="background-black block"></span> Angel
-                Gonzalez
+                name <span className="background-black block"></span>{" "}
+                {testimonyOne.name}
               </span>
             </p>
             <p className="date">
               <span className="date__inner-text">
-                date <span className="background-black block date-block"></span>9/02/21
+                date <span className="background-black block date-block"></span>
+                {testimonyOne.date}
               </span>
             </p>
           </div>
           <div className={`info-block ${props.bioRightClass}`}>
-            <p className="quote">
-              "WITTY QUOTE FROM THE TESTIMONY THAT SHOULD GARNER FURTHER
-              ATTENTION."
-            </p>
+            <p className="quote">{`"${testimonyTwo.quote}"`}</p>
             <p className="name">
               <span className="name__inner-text">
-                name <span className="background-gray block"></span> Angel
-                Gonzalez
+                name <span className="background-gray block"></span>
+                {testimonyTwo.name}
               </span>
             </p>
             <p className="date">
               <span className="date__inner-text">
-                date <span className="background-gray block date-block"></span>9/02/21
+                date <span className="background-gray block date-block"></span>
+                {testimonyTwo.date}
               </span>
             </p>
           </div>
@@ -125,7 +130,7 @@ export default function TestimonialOne(props) {
             width="100%"
             height="100%"
             muted="muted"
-            src="https://luis-pagan.nyc3.digitaloceanspaces.com/testimony-placeholder2.mp4"
+            src={testimonyTwo.video_url}
           ></video>
           <div className="play-icon">
             <img src={PlayIcon} alt="" onClick={play} />

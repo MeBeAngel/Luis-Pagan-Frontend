@@ -2,7 +2,6 @@ import { React, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import MosCard from "../components/MosCard";
 import Button from "../components/Button";
-import Test from "../images/test.svg";
 
 export default function MosPage() {
   ////////// Remove videoWrapper block after video ends //////////
@@ -69,7 +68,7 @@ export default function MosPage() {
 
     ////////// Strapi API call for MOS Cards //////////
     useEffect(() => {
-      fetch('http://localhost:4000/mos-cards', {
+      fetch('https://luis-pagan-hyh5u.ondigitalocean.app/mos-cards', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -110,7 +109,7 @@ export default function MosPage() {
           mosTitle={card.title}
           mosNumber={card.number}
           mosDescription={card.description}
-          mosImg={`http://localhost:4000${card.image.url}`}
+          mosImg={`https://luis-pagan-hyh5u.ondigitalocean.app${card.image.url}`}
           videoUrl={card.video_url}
           btnOnClick={openOverlay}
           videoOnClick={closeOverlay}

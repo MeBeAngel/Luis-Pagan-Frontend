@@ -5,11 +5,6 @@ import Btn from "../components/Button";
 // Nav Logo
 import Logo from "../images/logo.svg";
 
-// Social icons
-import FacebookYellow from "../images/facebook_yellow.svg";
-import InstagramYellow from "../images/instagram_yellow.svg";
-import LinkedinYellow from "../images/linkedin_yellow.svg";
-
 export default function Nav(props) {
   // Saves open and closed state of Nav overlay
   const [showNavOverlay, setShowNavOverlay] = useState(false);

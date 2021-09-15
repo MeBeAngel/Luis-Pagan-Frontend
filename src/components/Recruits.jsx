@@ -4,8 +4,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import RecruitCard from "../components/RecruitCard";
-import Image from "../images/recruit.svg";
-import TestImage from "../images/test-recruit.svg";
 
 export default function Recruits(props) {
   ///// Checks for screen width changes
@@ -47,7 +45,7 @@ export default function Recruits(props) {
 
   ////////// Strapi API call for Recruit Cards //////////
   useEffect(() => {
-    fetch('http://localhost:4000/recruit-cards', {
+    fetch('https://luis-pagan-hyh5u.ondigitalocean.app/recruit-cards', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -75,7 +73,7 @@ export default function Recruits(props) {
         {recruitCards.map((recruit) => {
           return <RecruitCard
               key={recruit.id}
-              recruitImage={`http://localhost:4000${recruit.image.url}`}
+              recruitImage={`https://luis-pagan-hyh5u.ondigitalocean.app${recruit.image.url}`}
               recruitName={recruit.name}
               doe={recruit.enlistment}
               rank={recruit.rank}
