@@ -31,7 +31,7 @@ export default function HomePage() {
           autoPlay="autoplay"
           muted="muted"
           loop="loop"
-          src="https://luis-pagan.nyc3.digitaloceanspaces.com/NG-main.mp4"
+          src="https://luis-pagan.s3.amazonaws.com/jumbotron-video/Nation_Gaurd_Video.mp4"
         ></video>
       </section>
 

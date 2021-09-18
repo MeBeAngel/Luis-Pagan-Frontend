@@ -11,7 +11,7 @@ export default function TestimonialOne(props) {
   const [testimonyTwo, setTestimonyTwo] = useState([]);
 
   useEffect(() => {
-    fetch("https://luis-pagan-hyh5u.ondigitalocean.app/testimony-1", {
+    fetch("https://luis-pagan-backend.herokuapp.com/testimony-1", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -20,7 +20,7 @@ export default function TestimonialOne(props) {
       .then((response) => response.json())
       .then((data) => setTestimonyOne(data));
 
-    fetch("https://luis-pagan-hyh5u.ondigitalocean.app/testimony-2", {
+    fetch("https://luis-pagan-backend.herokuapp.com/testimony-2", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

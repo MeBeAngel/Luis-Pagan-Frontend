@@ -68,7 +68,7 @@ export default function MosPage() {
 
     ////////// Strapi API call for MOS Cards //////////
     useEffect(() => {
-      fetch('https://luis-pagan-hyh5u.ondigitalocean.app/mos-cards', {
+      fetch('https://luis-pagan-backend.herokuapp.com/mos-cards', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -109,7 +109,7 @@ export default function MosPage() {
           mosTitle={card.title}
           mosNumber={card.number}
           mosDescription={card.description}
-          mosImg={`https://luis-pagan-hyh5u.ondigitalocean.app${card.image.url}`}
+          mosImg={card.image.url}
           videoUrl={card.video_url}
           btnOnClick={openOverlay}
           videoOnClick={closeOverlay}
