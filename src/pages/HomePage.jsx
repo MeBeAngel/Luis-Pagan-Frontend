@@ -4,6 +4,7 @@ import { useMediaQuery } from "react-responsive";
 import TestimonialOne from "../components/TestimonialOne";
 import Benefits from "../components/Benefits";
 import Recruits from "../components/Recruits";
+import EmailRequest from "../components/EmailRequest";
 import Button from "../components/Button";
 
 export default function HomePage() {
@@ -56,12 +57,7 @@ export default function HomePage() {
         bioRightClass="gray"
       />
 
-      <section className="email-request">
-        <p>CURIOUS? FIND OUT WHAT WE CAN ACHIEVE!</p>
-        <input type="email" placeholder="Email Address" />
-        <br />
-        <Button btnClass="yellow-btn email-btn" btnText="SUBMIT" />
-      </section>
+      <EmailRequest />
     </div>
   );
 }

@@ -45,7 +45,7 @@ export default function Recruits(props) {
 
   ////////// Strapi API call for Recruit Cards //////////
   useEffect(() => {
-    fetch('https://luis-pagan-hyh5u.ondigitalocean.app/recruit-cards', {
+    fetch('https://luis-pagan-backend.herokuapp.com/recruit-cards', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ export default function Recruits(props) {
         {recruitCards.map((recruit) => {
           return <RecruitCard
               key={recruit.id}
-              recruitImage={`https://luis-pagan-hyh5u.ondigitalocean.app${recruit.image.url}`}
+              recruitImage={recruit.image.url}
               recruitName={recruit.name}
               doe={recruit.enlistment}
               rank={recruit.rank}

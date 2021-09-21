@@ -1,0 +1,15 @@
+{
+  "forms": {
+    "optInForm": {
+      "name": "Opt-In Form",
+      "actions": [
+        {
+          "app": "mailchimp",
+          "type": "addOrUpdateContact",
+          "audience": "$REACT_APP_MAILCHIMP_AUDIENCE",
+          "apiKey": "$REACT_APP_MAILCHIMP_API_KEY"
+        }
+      ]
+    }
+  }
+}
