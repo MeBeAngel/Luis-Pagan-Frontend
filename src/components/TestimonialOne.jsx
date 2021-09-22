@@ -126,7 +126,7 @@ export default function TestimonialOne(props) {
             width="100%"
             height="100%"
             muted="muted"
-            poster={props.videoPoster}
+            poster={props.poster}
             src={props.videoUrl}
           ></video>
           <div className="play-icon">

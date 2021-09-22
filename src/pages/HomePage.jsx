@@ -42,6 +42,8 @@ export default function HomePage() {
   }, []);
   /////////////////////////////////////////////
 
+  console.log(testimonyOne)
+
 
   return (
     <div className="home-page-wrapper">
@@ -71,7 +73,8 @@ export default function HomePage() {
         rightVideo="hide"
         bioLeftClass="black"
         bioRightClass="hide"
-        poster={testimonyOne.poster.url}
+        poster={testimonyOne.poster_url}
+        videoUrl={testimonyOne.video_url}
       />
 
       <Recruits />
@@ -83,6 +86,8 @@ export default function HomePage() {
         leftVideo={biggerScreens && "hide"}
         bioLeftClass="hide"
         bioRightClass="gray"
+        poster={testimonyTwo.poster_url}
+        videoUrl={testimonyTwo.video_url}
       />
 
       <EmailRequest />
