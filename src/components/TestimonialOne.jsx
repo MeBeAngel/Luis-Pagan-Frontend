@@ -2,6 +2,7 @@ import { React, useState, useEffect } from "react";
 import PlayIcon from "../images/play.svg";
 import PauseIcon from "../images/pause.svg";
 import ResetIcon from "../images/reset.svg";
+import PosterImage from "../images/testimonial-poster.svg";
 
 export default function TestimonialOne(props) {
 
@@ -80,6 +81,7 @@ export default function TestimonialOne(props) {
             width="100%"
             height="100%"
             muted="muted"
+            poster={PosterImage}
             src={testimonyOne.video_url}
           ></video>
           <div className="play-icon">
