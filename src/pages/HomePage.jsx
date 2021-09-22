@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import TestimonialOne from "../components/TestimonialOne";
@@ -16,6 +16,32 @@ export default function HomePage() {
   const biggerScreens = useMediaQuery({ query: "(min-width: 1000px)" });
 
   /////////////////////////////////////
+
+  ////////// Testimony API Call and state //////////
+  const [testimonyOne, setTestimonyOne] = useState([]);
+  const [testimonyTwo, setTestimonyTwo] = useState([]);
+
+  useEffect(() => {
+    fetch("https://luis-pagan-backend.herokuapp.com/testimony-1", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => setTestimonyOne(data));
+
+    fetch("https://luis-pagan-backend.herokuapp.com/testimony-2", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => setTestimonyTwo(data));
+  }, []);
+  /////////////////////////////////////////////
+
 
   return (
     <div className="home-page-wrapper">
@@ -45,6 +71,7 @@ export default function HomePage() {
         rightVideo="hide"
         bioLeftClass="black"
         bioRightClass="hide"
+        poster={testimonyOne.poster.url}
       />
 
       <Recruits />

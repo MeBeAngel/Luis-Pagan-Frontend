@@ -2,8 +2,6 @@ import { React, useState, useEffect } from "react";
 import PlayIcon from "../images/play.svg";
 import PauseIcon from "../images/pause.svg";
 import ResetIcon from "../images/reset.svg";
-import PosterImage from "../images/testimonial-poster.svg";
-import PosterImage2 from "../images/testimonial-poster-2.svg";
 
 export default function TestimonialOne(props) {
 
@@ -32,7 +30,6 @@ export default function TestimonialOne(props) {
       .then((data) => setTestimonyTwo(data));
   }, []);
   /////////////////////////////////////////////
-  
 
   useEffect(() => {
     const video = document.getElementsByClassName("video");
@@ -63,13 +60,11 @@ export default function TestimonialOne(props) {
   }
 
   function reset(e) {
-    console.log(e.target.parentNode.parentNode.children);
     e.target.parentNode.style.display = "none";
     e.target.parentNode.parentNode.children[2].style.display = "block";
     e.target.parentNode.parentNode.children[0].currentTime = 0;
     e.target.parentNode.parentNode.children[0].play();
   }
-
  
 
   return (
@@ -82,8 +77,8 @@ export default function TestimonialOne(props) {
             width="100%"
             height="100%"
             muted="muted"
-            poster={PosterImage}
-            src={testimonyOne.video_url}
+            poster={props.poster}
+            src={props.videoUrl}
           ></video>
           <div className="play-icon">
             <img src={PlayIcon} alt="" onClick={play} />
@@ -131,8 +126,8 @@ export default function TestimonialOne(props) {
             width="100%"
             height="100%"
             muted="muted"
-            poster={PosterImage2}
-            src={testimonyTwo.video_url}
+            poster={props.videoPoster}
+            src={props.videoUrl}
           ></video>
           <div className="play-icon">
             <img src={PlayIcon} alt="" onClick={play} />
