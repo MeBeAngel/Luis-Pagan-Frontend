@@ -3,6 +3,7 @@ import PlayIcon from "../images/play.svg";
 import PauseIcon from "../images/pause.svg";
 import ResetIcon from "../images/reset.svg";
 import PosterImage from "../images/testimonial-poster.svg";
+import PosterImage2 from "../images/testimonial-poster-2.svg";
 
 export default function TestimonialOne(props) {
 
@@ -130,6 +131,7 @@ export default function TestimonialOne(props) {
             width="100%"
             height="100%"
             muted="muted"
+            poster={PosterImage2}
             src={testimonyTwo.video_url}
           ></video>
           <div className="play-icon">
