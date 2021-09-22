@@ -31,6 +31,7 @@ export default function HomePage() {
         <video
           autoPlay="autoplay"
           muted="muted"
+          playsInline="playsinline"
           loop="loop"
           src="https://luis-pagan.s3.amazonaws.com/jumbotron-video/Nation_Gaurd_Video.mp4"
         ></video>

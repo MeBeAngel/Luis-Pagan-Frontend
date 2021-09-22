@@ -30,8 +30,6 @@ export default function TestimonialOne(props) {
       .then((data) => setTestimonyTwo(data));
   }, []);
   /////////////////////////////////////////////
-
-  console.log(testimonyOne)
   
 
   useEffect(() => {
